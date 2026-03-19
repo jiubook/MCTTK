@@ -1,5 +1,4 @@
 # 输出文件（不提交到仓库）
-output/*.json
 output/*.txt
 output/*.md
 output/*.jpg
