@@ -1,0 +1,149 @@
+{
+  "default_modules": [
+    {
+      "id": "module_sign",
+      "title": "工具署名",
+      "content": "[size=2][b]【本文Ai翻译及Ai排版借助了： [url=https://jiubook.github.io/MinecraftJJTools/J2MM_JsonToMcbbsMarkdown.html]J2MM[/url]、[url=https://github.com/jiubook/MinecraftJJTools]JBAiGNN[/url]、[url=https://chatgpt.com/]ChatGPT[/url]、[url=https://claude.com/]Claude[/url]等工具 】[/b][/size]",
+      "position": "start",
+      "order": 1001,
+      "enabled": true
+    },
+    {
+      "id": "module_java_snapshot_header",
+      "title": "Java版 每周快照 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=48,48]https://www.mcbbs.co/data/attachment/common/ea/common_64_icon.png[/img][/float][size=32px][b][color=#645944]每周快照[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][b]每周快照[/b]是 Minecraft Java 版的测试机制，用于新特性的展示和反馈收集。\n[*][color=#8E2609]快照有可能导致存档损坏，因此请注意备份，不要直接在你的主存档游玩快照。[/color]\n[*]转载本帖时须要注明原作者以及本帖地址。[size=0px]本帖来自www.mcbbs.co[/size]\n[*]部分新特性译名仅供参考，不代表最终结果。\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1002,
+      "enabled": false
+    },
+    {
+      "id": "module_java_prerelease_header",
+      "title": "Java版 预发布版 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=48,48]https://www.mcbbs.co/data/attachment/common/ea/common_64_icon.png[/img][/float][size=32px][b][color=#645944]预发布版[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][b]预发布版[/b]是 Minecraft Java 版的测试机制，主要是为了收集漏洞反馈，为正式发布做好准备。\n[*][color=#8E2609]预发布版有可能导致存档损坏，因此请注意备份，不要直接在你的主存档游玩预发布版。[/color]\n[*]转载本帖时须要注明原作者以及本帖地址。[size=0px]本帖来自www.mcbbs.co[/size]\n[*]部分新特性译名仅供参考，不代表最终结果。\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1003,
+      "enabled": false
+    },
+    {
+      "id": "module_java_rc_header",
+      "title": "Java版 候选版本 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=48,48]https://www.mcbbs.co/data/attachment/common/ea/common_64_icon.png[/img][/float][size=32px][b][color=#645944]候选版本[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][b]候选版本[/b]是 Minecraft Java 版的测试机制。如果没有重大漏洞，该版本将会被用于正式发布。\n[*][color=#8E2609]候选版本有可能导致存档损坏，因此请注意备份，不要直接在你的主存档游玩候选版本。[/color]\n[*]转载本帖时须要注明原作者以及本帖地址。[size=0px]本帖来自www.mcbbs.co[/size]\n[*]部分新特性译名仅供参考，不代表最终结果。\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1004,
+      "enabled": false
+    },
+    {
+      "id": "module_java_release_header",
+      "title": "Java 正式版 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=46,48]https://ooo.0o0.ooo/2017/01/30/588f60bbaaf78.png[/img][/float][size=32px][b][color=#645944]Minecraft Java 版[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][b]Minecraft Java 版[/b]是指运行在 Windows、macOS 与 Linux 平台上，使用 Java 语言开发的 Minecraft 版本。\n[*][b]正式版[/b]包含所有特性且安全稳定，所有玩家都可以尽情畅享。\n[*]转载本帖时须要注明原作者以及本帖地址。[size=0px]本帖来自www.mcbbs.co[/size]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1005,
+      "enabled": false
+    },
+    {
+      "id": "module_bedrock_beta_header",
+      "title": "基岩版 测试版 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=48,48]https://www.mcbbs.co/data/attachment/common/ea/common_64_icon.png[/img][/float][size=32px][b][color=#645944]测试版[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][b]测试版[/b]是 Minecraft 基岩版的测试机制，主要用于下一个正式版的特性预览。\n[*][color=#8E2609]测试版有可能导致存档损坏，因此请注意备份，不要直接在你的主存档游玩测试版。[/color]\n[*]转载本帖时须要注明原作者以及本帖地址。[size=0px]本帖来自www.mcbbs.co[/size]\n[*]部分新特性译名仅供参考，不代表最终结果。\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1006,
+      "enabled": false
+    },
+    {
+      "id": "module_bedrock_release_header",
+      "title": "基岩版 正式版 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=46,48]https://ooo.0o0.ooo/2017/01/30/588f60bbaaf78.png[/img][/float][size=32px][b][color=#645944]Minecraft 基岩版[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][b]Minecraft 基岩版[/b]是指运行在移动平台（Android、iOS）、Windows 10、主机（Xbox One、Switch、PlayStation 4）上，使用「基岩引擎」（C++语言）开发的 Minecraft 版本。\n[*][b]正式版[/b]包含所有特性且安全稳定，所有玩家都可以尽情畅享。\n[*]转载本帖时须要注明原作者以及本帖地址。[size=0px]本帖来自www.mcbbs.co[/size]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1007,
+      "enabled": false
+    },
+    {
+      "id": "module_commentary_header",
+      "title": "时评 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=48,48]https://www.mcbbs.co/data/attachment/common/03/common_63_icon.png[/img][/float][size=32px][b][color=#645944]时评[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][b]时评[/b]为玩家对官方消息的分析与探讨，不代表官方意见\n[*]请在交流时保持心平气和\n[*]转载本帖时须要注明原作者以及本帖地址。[size=0px]本帖来自www.mcbbs.co[/size]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1008,
+      "enabled": false
+    },
+    {
+      "id": "module_normal_header",
+      "title": "普通资讯/博文 - 开头",
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/forum/202603/15/180957i6j4oo2mrn8s6btt.webp[/img][/float][size=24px][b][color=#645944]转载须知[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*]转载本帖时须要注明原作者以及本帖地址。\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "start",
+      "order": 1009,
+      "enabled": false
+    },
+    {
+      "id": "module_java_snapshot_footer",
+      "title": "Java版 每周快照 - 结尾",
+      "order": 2009,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/9f/common_56_icon.png[/img][/float][size=24px][b][color=#645944]实用链接[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://www.minecraft.net/zh-hans/download/server][color=Sienna]官方服务端 jar 下载地址[/color][/url]\n[*][url=https://www.minecraft.net/zh-hans/download/][color=Sienna]正版启动器下载地址[/color][/url]\n[*][url=https://bugs.mojang.com/projects/MC/summary][color=Sienna]漏洞报告站点（仅限英文）[/color][/url]\n[*][url=https://feedback.minecraft.net/][color=Sienna]官方反馈网站（仅限英文）[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/forum/202603/16/015357jo333134doqo4yyo.webp[/img][/float][size=24px][b][color=#645944]如何游玩快照？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*]对于正版用户：请打开官方启动器，在「配置」选项卡中启用「快照」，选择「最新快照」即可。\n[*]对于非正版用户：请于[url=https://archives.mcbbs.co/read.php?tid=38297][color=Sienna]推荐启动器列表[/color][/url]寻找合适的启动器。目前绝大多数主流启动器都带有下载功能。如仍有疑惑请到[url=https://www.mcbbs.co/forum-59-1.html][color=Sienna]原版问答[/color][/url]板块提问。\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 幻翼块讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_java_prerelease_footer",
+      "title": "Java版 预发布版 - 结尾",
+      "order": 2008,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/9f/common_56_icon.png[/img][/float][size=24px][b][color=#645944]实用链接[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://www.minecraft.net/zh-hans/download/server][color=Sienna]官方服务端 jar 下载地址[/color][/url]\n[*][url=https://www.minecraft.net/zh-hans/download/][color=Sienna]正版启动器下载地址[/color][/url]\n[*][url=https://bugs.mojang.com/projects/MC/summary][color=Sienna]漏洞报告站点（仅限英文）[/color][/url]\n[*][url=https://feedback.minecraft.net/][color=Sienna]官方反馈网站（仅限英文）[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/forum/202603/16/015357jo333134doqo4yyo.webp[/img][/float][size=24px][b][color=#645944]如何游玩预发布版？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*]对于正版用户：请打开官方启动器，在「配置」选项卡中启用「快照」，选择「最新快照」即可。\n[*]对于非正版用户：请于[url=https://archives.mcbbs.co/read.php?tid=38297][color=Sienna]推荐启动器列表[/color][/url]寻找合适的启动器。目前绝大多数主流启动器都带有下载功能。如仍有疑惑请到[url=https://www.mcbbs.co/forum-59-1.html][color=Sienna]原版问答[/color][/url]板块提问。\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 幻翼块讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_java_rc_footer",
+      "title": "Java版 候选版本 - 结尾",
+      "order": 2007,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/9f/common_56_icon.png[/img][/float][size=24px][b][color=#645944]实用链接[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://www.minecraft.net/zh-hans/download/server][color=Sienna]官方服务端 jar 下载地址[/color][/url]\n[*][url=https://www.minecraft.net/zh-hans/download/][color=Sienna]正版启动器下载地址[/color][/url]\n[*][url=https://bugs.mojang.com/projects/MC/summary][color=Sienna]漏洞报告站点（仅限英文）[/color][/url]\n[*][url=https://feedback.minecraft.net/][color=Sienna]官方反馈网站（仅限英文）[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/forum/202603/16/015357jo333134doqo4yyo.webp[/img][/float][size=24px][b][color=#645944]如何游玩候选版本？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*]对于正版用户：请打开官方启动器，在「配置」选项卡中启用「快照」，选择「最新快照」即可。\n[*]对于非正版用户：请于[url=https://archives.mcbbs.co/read.php?tid=38297][color=Sienna]推荐启动器列表[/color][/url]寻找合适的启动器。目前绝大多数主流启动器都带有下载功能。如仍有疑惑请到[url=https://www.mcbbs.co/forum-59-1.html][color=Sienna]原版问答[/color][/url]板块提问。\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 幻翼块讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_java_release_footer",
+      "title": "Java 正式版 - 结尾",
+      "order": 2006,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/9f/common_56_icon.png[/img][/float][size=24px][b][color=#645944]实用链接[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://www.minecraft.net/zh-hans/download/server][color=Sienna]官方服务端 jar 下载地址[/color][/url]\n[*][url=https://www.minecraft.net/zh-hans/download/][color=Sienna]正版启动器下载地址[/color][/url]\n[*][url=https://bugs.mojang.com/projects/MC/summary][color=Sienna]漏洞报告站点（仅限英文）[/color][/url]\n[*][url=https://feedback.minecraft.net/][color=Sienna]官方反馈网站（仅限英文）[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/forum/202603/16/015357jo333134doqo4yyo.webp[/img][/float][size=24px][b][color=#645944]如何游玩正式版？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*]对于正版用户：请打开官方启动器，选择「最新版本」即可。\n[*]对于非正版用户：请于[url=https://archives.mcbbs.co/read.php?tid=38297][color=Sienna]推荐启动器列表[/color][/url]寻找合适的启动器。目前绝大多数主流启动器都带有下载功能。如仍有疑惑请到[url=https://www.mcbbs.co/forum-59-1.html][color=Sienna]原版问答[/color][/url]板块提问。\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 幻翼块讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_bedrock_beta_footer",
+      "title": "基岩版 测试版 - 结尾",
+      "order": 2005,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/9f/common_56_icon.png[/img][/float][size=24px][b][color=#645944]实用链接[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://bugs.mojang.com/projects/MC/summaryPE][color=Sienna]漏洞报告站点（仅限英文）[/color][/url]\n[*][url=https://feedback.minecraft.net/][color=Sienna]官方反馈网站（仅限英文）[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/forum/202603/16/015357jo333134doqo4yyo.webp[/img][/float][size=24px][b][color=#645944]如何游玩测试版？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*]请访问[url=https://www.minecraft.net/zh-hans/get-minecraft][color=Sienna]官方游戏获取地址[/color][/url]，根据您所使用的平台获取游戏。\n[*]基岩测试版/预览版仅限于 Windows 10、Android、iOS、Xbox One 平台。请根据[url=https://archives.mcbbs.co/thread-1299939-1-1.html][color=Sienna]官方指引[/color][/url]启用/关闭测试版/预览版。\n[*]在新建/编辑地图时，请滑动到「实验性游戏内容（Experiments）」，即可体验最新内容。\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 幻翼块讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_bedrock_release_footer",
+      "title": "基岩版 正式版 - 结尾",
+      "order": 2004,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/9f/common_56_icon.png[/img][/float][size=24px][b][color=#645944]实用链接[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://bugs.mojang.com/projects/MC/summaryPE][color=Sienna]漏洞报告站点（仅限英文）[/color][/url]\n[*][url=https://feedback.minecraft.net/][color=Sienna]官方反馈网站（仅限英文）[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/forum/202603/16/015357jo333134doqo4yyo.webp[/img][/float][size=24px][b][color=#645944]如何游玩？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*]请访问[url=https://www.minecraft.net/zh-hans/get-minecraft][color=Sienna]官方游戏获取地址[/color][/url]，根据您所使用的平台获取游戏。\n[*]在新建/编辑地图时，请滑动到「实验性游戏内容（Experiments）」，即可体验最新内容。\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 幻翼块讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_commentary_footer",
+      "title": "时评 - 结尾",
+      "order": 2003,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/9f/common_56_icon.png[/img][/float][size=24px][b][color=#645944]本文所涉及的官方消息或媒体评论[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=地址][color=Sienna]标题[/color][/url]\n[*]（如有多项请自行添加）\n[/list][/size][/td][/tr]\n[/table][/font][/align]\n[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 幻翼块讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_normal_footer",
+      "title": "普通资讯/博文 - 结尾",
+      "order": 2002,
+      "content": "[align=center][font=-apple-system, BlinkMacSystemFont,Segoe UI, Roboto, Helvetica, Arial, sans-serif][table=85%]\n[tr=#E3C99E][td][float=left][img=32,32]https://www.mcbbs.co/data/attachment/common/6c/common_45_icon.png[/img][/float][size=24px][b][color=#645944]想了解更多资讯？[/color][/b][/size][/td][/tr]\n[tr=#FDF6E5][td][size=16px][list]\n[*][url=https://archives.mcbbs.co/read.php?tid=874677][color=Sienna]外部来源以及详细的更新条目追踪[/color][/url]\n[*][url=https://www.mcbbs.co/forum-news-1.html][color=Sienna]我的世界中文论坛 - 新闻资讯板块[/color][/url]\n[/list][/size][/td][/tr]\n[/table][/font][/align]",
+      "position": "end",
+      "enabled": false
+    },
+    {
+      "id": "module_Agreement",
+      "title": "开源协议",
+      "order": 2001,
+      "content": "[size=2][b]【本Ai工具以 [url=https://www.gnu.org/licenses/gpl-3.0.zh-cn.html]GPL-3.0[/url] 协议发布】\n【本Ai翻译作品以 [url=https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans]CC BY-SA 4.0[/url] 协议发布】[/b][/size]",
+      "position": "end",
+      "enabled": true
+    }
+  ],
+  "custom_modules": []
+}

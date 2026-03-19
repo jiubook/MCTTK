@@ -1,0 +1,40 @@
+# 输出文件（不提交到仓库）
+output/*.json
+output/*.txt
+output/*.md
+output/*.jpg
+output/*.jpeg
+output/*.png
+output/*.gif
+output/*.webp
+
+old/
+
+# 注意：.state.json 和 .posted.json 是 dotfile，不被上面的 * 通配符匹配
+# 因此它们默认会被 git 跟踪，无需额外处理
+
+# 验证码临时文件
+captcha.png
+captcha*.png
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 调试文件
+debug_post_*.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 环境
+.env
+venv/
+.venv/

@@ -1,0 +1,110 @@
+{
+  "_comment": "MCTTK_MC新闻自动爬取+翻译+发布 统一配置",
+  "openai_compat": {
+    "host": "api.videocaptioner.cn",
+    "endpoint": "/v1/chat/completions",
+    "api_key_env": "OPENAI_API_KEY",
+    "api_key": "",
+    "model": "gpt-5-mini-2025-08-07",
+    "max_tokens": 10000,
+    "timeout": 120
+  },
+  "prompts": {
+    "translate_text_default": "你是专业的 Minecraft 游戏翻译。请将下面文本翻译成简体中文。\n翻译规则（非常重要）：\n1. 使用 Minecraft 官方中文译名（Java版）。\n2. 不要直译游戏术语。\n要求：\n- 保留版本号/编号（如 MC-12345）、URL、代码片段、反引号内容不被改写\n- 如包含 Markdown 链接 [text](url)，请只翻译 visible text\n- 仅输出译文，不要解释",
+    "translate_blocks_system": "你是 Minecraft 官方更新日志翻译专家，请把用户提供的 JSON 数组逐条翻译成简体中文。保持游戏特有的语气，专业且简洁。\n翻译规则（非常重要）：\n1. 使用 Minecraft 官方中文译名（Java版）。\n2. 不要直译游戏术语。\n输出要求：\n1. 只输出 JSON 数组\n2. 每项格式：{\"id\":..., \"translated_text\":...}\n3. 不要输出任何解释\n4. 保留 URL / MC-编号 / 代码\n5. 保留换行",
+    "translate_title_system": "请将 Minecraft 新闻标题翻译成简体中文。要求：保留版本号/编号/专有名词的拼写，不要添加额外解释，只输出译文标题。"
+  },
+  "minecraft_api": {
+    "search_url": "https://net-secondary.web.minecraft-services.net/api/v1.0/zh-cn/search",
+    "pageSize": 5,
+    "sortType": "Recent",
+    "category": "News",
+    "site_base": "https://www.minecraft.net"
+  },
+  "http": {
+    "verify_ssl": false,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "proxies": {
+      "http": "",
+      "https": ""
+    }
+  },
+  "output": {
+    "save_dir": "output"
+  },
+  "retry": {
+    "translation": { "max_retries": 3, "wait_for_input": false },
+    "download":    { "max_retries": 3, "wait_for_input": false }
+  },
+  "concurrency": {
+    "translation_workers": 3
+  },
+  "news_types": {
+    "java_release":    true,
+    "java_snapshot":    true,
+    "java_prerelease":  true,
+    "java_rc":          true,
+    "bedrock_release":  true,
+    "bedrock_beta":     true
+  },
+  "feedback_site": {
+    "enabled": true,
+    "base_url": "https://feedback.minecraft.net",
+    "knowledge_base_url": "https://feedback.minecraft.net/hc/en-us/categories/115000410252-Knowledge-Base",
+    "timeout": 30,
+    "sections": [
+      {
+        "name": "Release Changelogs",
+        "name_cn": "基岩正式版更新日志",
+        "url": "https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs",
+        "section_id": "360001186971",
+        "enabled": true,
+        "articles_count": 3
+      },
+      {
+        "name": "Beta and Preview Information and Changelogs",
+        "name_cn": "基岩测试版更新日志",
+        "url": "https://feedback.minecraft.net/hc/en-us/sections/360001185332-Beta-and-Preview-Information-and-Changelogs",
+        "section_id": "360001185332",
+        "enabled": true,
+        "articles_count": 3
+      },
+      {
+        "name": "Snapshot Information and Changelogs",
+        "name_cn": "java快照版更新日志",
+        "url": "https://feedback.minecraft.net/hc/en-us/sections/360002267532-Snapshot-Information-and-Changelogs",
+        "section_id": "360002267532",
+        "enabled": false,
+        "articles_count": 3
+      },
+      {
+        "name": "Minecraft Education Changelogs",
+        "name_cn": "教育版更新日志",
+        "url": "https://feedback.minecraft.net/hc/en-us/sections/360001293291-Minecraft-Education-Changelogs",
+        "section_id": "360001293291",
+        "enabled": false,
+        "articles_count": 3
+      }
+    ]
+  },
+  "mcbbs": {
+    "enabled": true,
+    "base_url": "https://www.mcbbs.co",
+    "forum_fid": 45,
+    "username": "newspaper",
+    "password": "",
+    "captcha_answer": "",
+    "sortid_map": {
+        "java_snapshot": 4,
+        "java_prerelease": 4,
+        "java_rc": 4,
+        "java_release": 4,
+        "bedrock_beta": 20,
+        "bedrock_release": 20,
+        "commentary": 16,
+        "normal": 16
+    },
+    "attach_json": true
+  }
+}
