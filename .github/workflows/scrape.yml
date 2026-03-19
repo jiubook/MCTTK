@@ -38,9 +38,9 @@ jobs:
 
       - name: Run scraper
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          MCBBS_USERNAME: ${{ secrets.MCBBS_USERNAME }}
-          MCBBS_PASSWORD: ${{ secrets.MCBBS_PASSWORD }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY-MCTTK }}
+          MCBBS_USERNAME: ${{ secrets.MCBBS_USERNAME-MCTTK }}
+          MCBBS_PASSWORD: ${{ secrets.MCBBS_PASSWORD-MCTTK }}
           MCBBS_CAPTCHA_ANSWER: ${{ secrets.MCBBS_CAPTCHA_ANSWER }}
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
