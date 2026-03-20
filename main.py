@@ -229,7 +229,7 @@ def run_scrape(config: dict, state_file: str, dry_run: bool = False) -> list:
 
 def run_post(processed: list, config: dict, no_image: bool = False, no_json: bool = False):
     """执行发布流程"""
-    from poster import MCBBSPoster, load_poster_config
+    from poster import MCBBSPoster, load_posted, save_posted, load_poster_config
     if not config.get("mcbbs", {}).get("enabled", False):
         print("[主] MCBBS 发布未启用（config.json 中 mcbbs.enabled = false）")
         return
@@ -248,6 +248,8 @@ def run_post(processed: list, config: dict, no_image: bool = False, no_json: boo
         return
 
     save_dir = config["output"]["save_dir"]
+    poster_state_file = os.path.join(save_dir, ".posted.json")
+    posted = load_posted(poster_state_file)
     success = 0
     failed = 0
 
@@ -256,6 +258,8 @@ def run_post(processed: list, config: dict, no_image: bool = False, no_json: boo
             print(f"\n[主] 发布: {stem}")
             poster.post_news_file(stem, txt_path, json_path, save_dir,
                                  no_image=no_image, attach_json=not no_json)
+            posted.add(stem)
+            save_posted(poster_state_file, posted)
             success += 1
             time.sleep(3)  # 发帖间隔，避免被封
         except Exception as e:
