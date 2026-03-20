@@ -666,8 +666,9 @@ class MCBBSPoster:
             except Exception as e:
                 print(f"    ⚠ JSON 附件上传失败，跳过: {e}")
 
-        # 检测分类
-        module_type = detect_module_type(message, title)
+        # 检测分类（优先用原始英文标题，避免翻译后关键词丢失）
+        original_title = meta.get("title", "").strip()
+        module_type = detect_module_type(message, original_title or title)
         sortid = self.sortid_map.get(module_type) if module_type else None
         if module_type and sortid:
             cat_name = _CATEGORY_GROUP.get(module_type, "未知")
