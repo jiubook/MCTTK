@@ -669,10 +669,15 @@ class MCBBSPoster:
         # 检测分类（优先用原始英文标题，避免翻译后关键词丢失）
         original_title = meta.get("title", "").strip()
         module_type = detect_module_type(message, original_title or title)
-        sortid = self.sortid_map.get(module_type) if module_type else None
-        if module_type and sortid:
+        # 如果无法检测到类型，使用 "normal" 作为默认分类
+        if not module_type:
+            module_type = "normal"
+        sortid = self.sortid_map.get(module_type)
+        if sortid:
             cat_name = _CATEGORY_GROUP.get(module_type, "未知")
             print(f"    分类: {cat_name} (sortid={sortid})")
+        else:
+            print(f"    ⚠ 警告: 未找到分类 {module_type} 的 sortid 配置")
 
         return self.post_thread(title, message, attachment_ids=attachment_ids, sortid=sortid)
 
