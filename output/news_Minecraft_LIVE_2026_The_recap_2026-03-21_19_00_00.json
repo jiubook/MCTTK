@@ -1,0 +1,561 @@
+{
+  "title": "Minecraft LIVE  2026: The recap",
+  "translated_title": "Minecraft LIVE  2026：回顾",
+  "release_date": "2026-03-21T19:00:00Z",
+  "url": "https://www.minecraft.net/zh-hans/article/mclive_march2026_recap",
+  "author": "Staff",
+  "imageAltText": "A colorful Minecraft Live banner showing bees, pigs, chickens, rabbits, and other mobs gathered in a moonlit grassy world beneath the Minecraft Live logo.",
+  "description": "Learn all about the latest news and updates announced at the first Minecraft LIVE of 2026!",
+  "header_image_url": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/LiveNight_DotNet_Blog_1170x500.jpg",
+  "blocks": [
+    {
+      "id": "b0001",
+      "type": "p",
+      "source_text": "The Minecraft universe keeps expanding! New game drops make our world deeper and more immersive. Quality-of-life features help make the most of your play time. And our real-life experiences let you enjoy Minecraft in entirely new ways with friends and family. We’re even releasing new video games! The most recent Minecraft LIVE features all that good stuff and more!",
+      "translated_text": "Minecraft 宇宙持续扩张！新的内容投放让我们的世界更丰富、更具沉浸感。便捷性功能让你的游玩时间更高效。线下体验则让你能与家人和朋友以全新的方式享受 Minecraft。我们甚至在推出新的电子游戏！最近的 Minecraft LIVE 展示了上述所有精彩内容以及更多！",
+      "meta": {}
+    },
+    {
+      "id": "b0002",
+      "type": "p",
+      "source_text": "It’s a lot to keep track of. But don’t get overwhelmed. Take a breath, sit back, and watch. Our developers will bring you all the news, bit by bit, in one handy show.",
+      "translated_text": "要跟上这些信息确实不少。但别被压垮。深呼吸，放松，坐下来看。我们的开发者会在一场便于观看的节目中，把所有新闻一点一滴地带给你。",
+      "meta": {}
+    },
+    {
+      "id": "b0003",
+      "type": "p",
+      "source_text": "We’ve also prepared a written recap. This is good for situations where watching a video might be frowned upon or slightly unwise. For example, you could print it out and read in the bath for a safe and relaxing Minecraft LIVE experience. Get creative!",
+      "translated_text": "我们也准备了文字回顾。适用于在不方便或不宜观看视频的场景。例如，你可以把它打印出来，在浴缸里阅读，享受一次既安全又放松的 Minecraft LIVE 体验。发挥创意吧！",
+      "meta": {}
+    },
+    {
+      "id": "b0004",
+      "type": "p",
+      "source_text": "The Minecraft universe keeps expanding! New game drops make our world deeper and more immersive. Quality-of-life features help make the most of your play time. And our real-life experiences let you enjoy Minecraft in entirely new ways with friends and family. We’re even releasing new video games! The most recent Minecraft LIVE features all that good stuff and more!",
+      "translated_text": "Minecraft 世界持续扩展！新的内容发布让我们的世界更丰富、更具沉浸感。体验优化功能帮助你更好地利用游戏时间。线下体验让你可以与亲友用全新的方式享受 Minecraft。我们甚至还在推出全新电子游戏！最近一期 Minecraft LIVE 展示了这些精彩内容以及更多！",
+      "meta": {}
+    },
+    {
+      "id": "b0005",
+      "type": "p",
+      "source_text": "It’s a lot to keep track of. But don’t get overwhelmed. Take a breath, sit back, and watch. Our developers will bring you all the news, bit by bit, in one handy show.",
+      "translated_text": "要记的事情很多，但别感到不知所措。深呼吸，放松坐下，观看即可。我们的开发者会在一档便捷的节目中，一点一点为你带来所有消息。",
+      "meta": {}
+    },
+    {
+      "id": "b0006",
+      "type": "p",
+      "source_text": "We’ve also prepared a written recap. This is good for situations where watching a video might be frowned upon or slightly unwise. For example, you could print it out and read in the bath for a safe and relaxing Minecraft LIVE experience. Get creative!",
+      "translated_text": "我们还准备了文字回顾。适合在观看视频不合适或略显不妥的场合使用。例如，你可以把它打印出来，在浴缸里阅读，享受一次安全又放松的 Minecraft LIVE 体验。发挥创意吧！",
+      "meta": {}
+    },
+    {
+      "id": "b0007",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Main_Stream_864x505.jpg",
+        "alt": "A colorful Minecraft Live banner showing bees, pigs, chickens, rabbits, and other mobs gathered in a bright grassy world beneath the Minecraft Live logo"
+      }
+    },
+    {
+      "id": "b0008",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Tiny_Takeover.jpg",
+        "alt": "A split Minecraft scene shows a villager, baby animals, chicks, and bee themed mobs gathered on a platform at sunset with a glowing torch on the right"
+      }
+    },
+    {
+      "id": "b0009",
+      "type": "h1",
+      "source_text": "Tiny Takeover",
+      "translated_text": "微型接管",
+      "meta": {}
+    },
+    {
+      "id": "b0010",
+      "type": "p",
+      "source_text": "You might already be familiar with Tiny Takeover – our upcoming game drop that changes the look of almost every baby mob. Before this drop they looked like smaller versions of their adult equivalents. These were cute but, as Agnes declared as she clutched a chicken plush in a recent meeting: “Not cute enough!”",
+      "translated_text": "你可能已经熟悉 Tiny Takeover —— 我们即将推出的游戏更新，它改变了几乎所有幼年生物的外观。在此更新之前，它们看起来只是成体的缩小版。这固然可爱，但正如 Agnes 在最近一次会议上抱着一只鸡布偶宣称的那样：“还不够可爱！”",
+      "meta": {}
+    },
+    {
+      "id": "b0011",
+      "type": "p",
+      "source_text": "Now every baby mob has its own distinct look, optimized for adorability.",
+      "translated_text": "现在每种幼年生物都有了独特的外观，并为更高的可爱度进行了优化。",
+      "meta": {}
+    },
+    {
+      "id": "b0012",
+      "type": "p",
+      "source_text": "Agnes, Jasper, Sarah, and Felix talk about the inspiration behind the drop, and Sandra gets into the real-life challenges that come with being our Vanilla Audio Designer. Those pigs weren’t messing about.",
+      "translated_text": "Agnes、Jasper、Sarah 和 Felix 讲述了本次更新背后的灵感来源；Sandra 则谈到作为我们原版音效设计师在现实中面临的挑战。那些猪可不是闹着玩的。",
+      "meta": {}
+    },
+    {
+      "id": "b0013",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_Exp_MCLIVE26.jpg",
+        "alt": "A group of people stands inside a dark cave holding glowing cubes while looking through a window‑shaped opening into a bright Minecraft world filled with villages mobs and blue sky"
+      }
+    },
+    {
+      "id": "b0014",
+      "type": "h1",
+      "source_text": "New Minecraft Experiences",
+      "translated_text": "全新 Minecraft 体验",
+      "meta": {}
+    },
+    {
+      "id": "b0015",
+      "type": "p",
+      "source_text": "As Torfi mentions, we continue to explore new ways to bring Minecraft to the real world. Minecraft Experience: Villager Rescue was the first of its kind, giving you a chance to mine resources, explore biomes, and even battle mobs in an immersive environment. This adventure is travelling the globe, and will soon arrive at Herning, Singapore, Mexico City, and Chicago. Check the official site for more details.",
+      "translated_text": "正如 Torfi 所提，我们继续探索将 Minecraft 带入现实世界的新方式。Minecraft 体验：村民营救 是首个此类体验，让你在沉浸式环境中采集资源、探索生物群系，甚至与敌对生物战斗。该冒险正在全球巡展，即将抵达 Herning、新加坡、墨西哥城与芝加哥。更多详情请查看官方网站。",
+      "meta": {}
+    },
+    {
+      "id": "b0016",
+      "type": "p",
+      "source_text": "We’re also working on an entirely new experience that takes place in a real forest! Minecraft Experience: Moonlight Trail is an outdoor nighttime adventure that’ll open soon in Buenos Aires. It will also travel to other cities over time.",
+      "translated_text": "我们还在打造一个全新的现场体验——发生在真实森林中！Minecraft 体验：月光小径 是一项户外夜间冒险活动，即将在布宜诺斯艾利斯开放，并将陆续巡回至其他城市。",
+      "meta": {}
+    },
+    {
+      "id": "b0017",
+      "type": "p",
+      "source_text": "[Learn more here!](https://www.minecraftexperience.com/)",
+      "translated_text": "在此了解更多：https://www.minecraftexperience.com/",
+      "meta": {}
+    },
+    {
+      "id": "b0018",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Minecraft_World.jpg",
+        "alt": "A Minecraft World banner showing classic characters and mobs gathered beneath a stone arch framed by blocky trees and terrain."
+      }
+    },
+    {
+      "id": "b0019",
+      "type": "h1",
+      "source_text": "Minecraft World",
+      "translated_text": "Minecraft 世界",
+      "meta": {}
+    },
+    {
+      "id": "b0020",
+      "type": "p",
+      "source_text": "This is a big one! We’ve been working with Merlin Entertainments to create Minecraft World! The theme park land will be opening at London’s Chessington World of Adventures in 2027.",
+      "translated_text": "这是个大消息！我们一直与 Merlin Entertainments 合作打造 Minecraft World！该主题乐园区域将于 2027 年在伦敦的 Chessington World of Adventures 开放。",
+      "meta": {}
+    },
+    {
+      "id": "b0021",
+      "type": "p",
+      "source_text": "Minecraft World will be packed with attractions and things to do. We’re planning the first ever Minecraft rollercoaster, the world’s biggest Minecraft shop, tasty Minecraft-themed food, opportunities to meet the mobs, and lots more. This is a truly epic collaboration between Mojang Studios and Merlin Entertainments, but we also recruited creators to help with some of the trickier challenges. We’ll share more on Minecraft World soon.",
+      "translated_text": "Minecraft World 将充满各类游乐设施与体验。我们计划打造首座 Minecraft 过山车、全球最大的 Minecraft 商店、美味的 Minecraft 主题餐点、与生物近距离接触的机会，以及更多精彩内容。这是 Mojang Studios 与 Merlin Entertainments 之间一次真正史诗级的合作，我们还邀请了创作者来协助解决一些更棘手的挑战。关于 Minecraft World 的更多信息我们会很快公布。",
+      "meta": {}
+    },
+    {
+      "id": "b0022",
+      "type": "p",
+      "source_text": "DISCLAIMER: Daisy and Filip’s enthusiasm for Minecraft’s real-life smell and taste might inspire you to lick a controller or chew on some official merchandise, but this is not recommended unless you’re a dog and get permission from your owner. Thanks.",
+      "translated_text": "免责声明：Daisy 和 Filip 对 Minecraft 真实气味与口感的热情可能会让你想去舔手柄或咬官方周边，但除非你是一只并且已获得主人允许的狗，否则不建议这么做。谢谢。",
+      "meta": {}
+    },
+    {
+      "id": "b0023",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_ChaosCubed.jpg",
+        "alt": "A split Minecraft image shows colorful underground caves on the left, a floating cube creature in the center, and a glowing red stone temple interior on the right"
+      }
+    },
+    {
+      "id": "b0024",
+      "type": "h1",
+      "source_text": "Chaos Cubed",
+      "translated_text": "混沌立方",
+      "meta": {}
+    },
+    {
+      "id": "b0025",
+      "type": "p",
+      "source_text": "We also featured a first-ever look at our upcoming game drop: Chaos Cubed!",
+      "translated_text": "我们还首次展示了即将推出的新作：Chaos Cubed！",
+      "meta": {}
+    },
+    {
+      "id": "b0026",
+      "type": "p",
+      "source_text": "First, we showed off the brand-new sulfur caves. They might look warm and inviting but beware; this isn’t the best place for a relaxing dip. Those pools are downright noxious and cause a strange dizzying-style effect if you get too close! We’re also introducing two new block sets – cinnabar and sulfur.",
+      "translated_text": "首先，我们展示了全新的硫磺洞穴。它们看起来温暖而诱人，但要注意；这里并不是放松浸泡的好去处。那些池塘极其有害，靠得太近会产生一种奇怪的眩晕类效果！我们还将引入两组新方块——辰砂和硫磺。",
+      "meta": {}
+    },
+    {
+      "id": "b0027",
+      "type": "p",
+      "source_text": "Though the new biome will be great to explore, our new mob, the sulfur cube, must be a highlight. Unlike any other mob in the game, it can absorb blocks! And its attributes change depending on what it’s consumed.",
+      "translated_text": "尽管这个新生物群系非常适合探索，但我们的新生物——硫磺立方体，才是重头戏。与游戏中任何其他生物不同，它可以吸收方块！而且它的属性会根据吞噬的方块发生变化。",
+      "meta": {}
+    },
+    {
+      "id": "b0028",
+      "type": "p",
+      "source_text": "Give it some wood and it might start acting a bit like a cubic “ball” type-thing. Let it consume ice and it will slide around, more like a chunky, oversized hockey puck. Develop your sulfur cube skills and you can pull off some amazing shots but like most things in Minecraft, things don’t always go exactly to plan! The sulfur cube can absorb loads of different block types, providing infinite potential for experimentation.",
+      "translated_text": "给它一些木头，它可能会开始像立方体版的“球”那样滚动。让它吞噬冰块，它就会滑行，更像是一块粗壮的超大号冰球。磨练你的硫磺方块怪技巧，你就能打出一些惊人的射门，但和 Minecraft 中的大多数事物一样，事情并不总是按计划进行！硫磺方块怪可以吸收大量不同类型的方块，带来无限实验可能。",
+      "meta": {}
+    },
+    {
+      "id": "b0029",
+      "type": "p",
+      "source_text": "This mob allows for even more creativity in your builds and refined chaos in your mini-games. We showcase a few ideas in this segment but, like everything we bring to the game, we’re mostly excited to see what you get up to when Chaos Cubed enters testing.",
+      "translated_text": "这个生物让你的建筑创意更丰富，也能为小游戏带来更精细的混乱。我们在本段展示了一些点子，但和我们带入游戏的所有内容一样，最让我们兴奋的还是在 Chaos Cubed 进入测试后看到你们会怎么发挥。",
+      "meta": {}
+    },
+    {
+      "id": "b0030",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Spicewood.jpg",
+        "alt": "The Minecraft Dungeons II logo glows in gold and blue inside a dark stone dungeon lit by scattered torches"
+      }
+    },
+    {
+      "id": "b0031",
+      "type": "h1",
+      "source_text": "Minecraft Dungeons II",
+      "translated_text": "Minecraft Dungeons II",
+      "meta": {}
+    },
+    {
+      "id": "b0032",
+      "type": "p",
+      "source_text": "It’s not often that we get to announce an entirely new game but here we go: [Minecraft Dungeons II is coming this year](https://www.minecraft.net/about-dungeons-ii)! This is an all-new action-RPG adventure where you’ll take on high-stakes encounters, thrilling challenges, and explore never-before-seen locations in the Minecraft universe. Of course, there will also be loot! Loads of it. Grab it all, or share with up to three friends as you co-operate to save a world in crisis.",
+      "translated_text": "我们很少有机会宣布全新的游戏，但这次来了：[我的世界：地下城 II 将于今年推出](https://www.minecraft.net/about-dungeons-ii)！这是一款全新的动作角色扮演冒险，你将迎来高风险遭遇、刺激挑战，并探索我的世界宇宙中前所未见的地点。当然，也会有战利品！大量战利品。全部捡走，或与最多三名好友共享，合作拯救处于危机中的世界。",
+      "meta": {}
+    },
+    {
+      "id": "b0033",
+      "type": "p",
+      "source_text": "It might seem obvious but here we are: Minecraft Dungeons II is the sequel to Minecraft Dungeons. There’s never been a better time to catch up if you’re late to the party.",
+      "translated_text": "这听起来很明显，但事实就是：我的世界：地下城 II 是《我的世界：地下城》的续作。如果你还没入手，现在正是补课的最佳时机。",
+      "meta": {}
+    },
+    {
+      "id": "b0034",
+      "type": "p",
+      "source_text": "Minecraft Dungeons II will be coming to Xbox Series X/S, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Steam, Xbox on PC, and Game Pass.",
+      "translated_text": "我的世界：地下城 II 将登陆 Xbox Series X/S、PlayStation 5、Nintendo Switch、Nintendo Switch 2、Steam、Xbox on PC 和 Game Pass。",
+      "meta": {}
+    },
+    {
+      "id": "b0035",
+      "type": "p",
+      "source_text": "We’ll share more news soon!",
+      "translated_text": "我们很快会分享更多消息！",
+      "meta": {}
+    },
+    {
+      "id": "b0036",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_DeepDig_NEW.jpg",
+        "alt": "A Minecraft Live The Deep Dig banner shows a top down view of a square arena with bold title text and a scoreboard reading Team 1 0–1 Team 2, framed by presenters on each side"
+      }
+    },
+    {
+      "id": "b0037",
+      "type": "h1",
+      "source_text": "The Deep Dig",
+      "translated_text": "深度挖掘",
+      "meta": {}
+    },
+    {
+      "id": "b0038",
+      "type": "p",
+      "source_text": "Chaos Cubed is one of the most intriguing game drops in quite some time! There’s just so much to show. Join Agnes, Jens, Elisabeth, Camman18, and Bekyamon as they discover the new features and face off in an incredibly intense selection of mini games featuring the awesome sulfur cube! Once again, credit to Vu for his admirable attempts to keep things running smoothly and understandable for you, our lovely viewers.",
+      "translated_text": "Chaos Cubed 是近期最引人入胜的游戏更新之一！内容丰富，值得细看。与 Agnes、Jens、Elisabeth、Camman18 和 Bekyamon 一同发现新功能，并在以惊艳的硫磺方块为特色的一系列激烈小游戏中一决高下！再次感谢 Vu，他在幕后努力让一切顺利并易于理解，献给我们可爱的观众们。",
+      "meta": {}
+    },
+    {
+      "id": "b0039",
+      "type": "p",
+      "source_text": "Thanks for watching Minecraft LIVE!",
+      "translated_text": "感谢收看 Minecraft LIVE！",
+      "meta": {}
+    },
+    {
+      "id": "b0040",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Main_Stream_864x505.jpg",
+        "alt": "A colorful Minecraft Live banner showing bees, pigs, chickens, rabbits, and other mobs gathered in a bright grassy world beneath the Minecraft Live logo"
+      }
+    },
+    {
+      "id": "b0041",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Tiny_Takeover.jpg",
+        "alt": "A split Minecraft scene shows a villager, baby animals, chicks, and bee themed mobs gathered on a platform at sunset with a glowing torch on the right"
+      }
+    },
+    {
+      "id": "b0042",
+      "type": "h1",
+      "source_text": "Tiny Takeover",
+      "translated_text": "Tiny Takeover",
+      "meta": {}
+    },
+    {
+      "id": "b0043",
+      "type": "p",
+      "source_text": "You might already be familiar with Tiny Takeover – our upcoming game drop that changes the look of almost every baby mob. Before this drop they looked like smaller versions of their adult equivalents. These were cute but, as Agnes declared as she clutched a chicken plush in a recent meeting: “Not cute enough!”",
+      "translated_text": "你可能已经熟悉 Tiny Takeover —— 我们即将推出的游戏更新，它改变了几乎所有幼年生物的外观。在此更新之前，它们只是成年体的缩小版。虽然也很可爱，但正如 Agnes 在最近一次会议上抱着一只鸡玩偶时宣称的：“还不够可爱！”",
+      "meta": {}
+    },
+    {
+      "id": "b0044",
+      "type": "p",
+      "source_text": "Now every baby mob has its own distinct look, optimized for adorability.",
+      "translated_text": "现在每种幼年生物都有独特的造型，经过专门优化以提升可爱度。",
+      "meta": {}
+    },
+    {
+      "id": "b0045",
+      "type": "p",
+      "source_text": "Agnes, Jasper, Sarah, and Felix talk about the inspiration behind the drop, and Sandra gets into the real-life challenges that come with being our Vanilla Audio Designer. Those pigs weren’t messing about.",
+      "translated_text": "Agnes、Jasper、Sarah 和 Felix 讲述了本次发布的灵感来源，Sandra 则谈到作为我们的原版音效设计师在现实中面临的挑战。那些猪可不是闹着玩的。",
+      "meta": {}
+    },
+    {
+      "id": "b0046",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_Exp_MCLIVE26.jpg",
+        "alt": "A group of people stands inside a dark cave holding glowing cubes while looking through a window‑shaped opening into a bright Minecraft world filled with villages mobs and blue sky"
+      }
+    },
+    {
+      "id": "b0047",
+      "type": "h1",
+      "source_text": "New Minecraft Experiences",
+      "translated_text": "全新 Minecraft 体验",
+      "meta": {}
+    },
+    {
+      "id": "b0048",
+      "type": "p",
+      "source_text": "As Torfi mentions, we continue to explore new ways to bring Minecraft to the real world. Minecraft Experience: Villager Rescue was the first of its kind, giving you a chance to mine resources, explore biomes, and even battle mobs in an immersive environment. This adventure is travelling the globe, and will soon arrive at Herning, Singapore, Mexico City, and Chicago. Check the official site for more details.",
+      "translated_text": "正如 Torfi 所提，我们持续探索将 Minecraft 带入现实世界的新方式。Minecraft Experience: Villager Rescue 是首个此类体验，让你在沉浸式场景中开采资源、探索生物群系，甚至与生物战斗。该冒险正在全球巡展，很快将抵达赫宁、新加坡、墨西哥城和芝加哥。详见官网。",
+      "meta": {}
+    },
+    {
+      "id": "b0049",
+      "type": "p",
+      "source_text": "We’re also working on an entirely new experience that takes place in a real forest! Minecraft Experience: Moonlight Trail is an outdoor nighttime adventure that’ll open soon in Buenos Aires. It will also travel to other cities over time.",
+      "translated_text": "我们还在打造一项全新的体验，将在真实森林中进行！Minecraft Experience: Moonlight Trail 是一场户外夜间冒险，很快将在布宜诺斯艾利斯开放，随后也会在其他城市巡回。",
+      "meta": {}
+    },
+    {
+      "id": "b0050",
+      "type": "p",
+      "source_text": "[Learn more here!](https://www.minecraftexperience.com/)",
+      "translated_text": "[了解更多！](https://www.minecraftexperience.com/)",
+      "meta": {}
+    },
+    {
+      "id": "b0051",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Minecraft_World.jpg",
+        "alt": "A Minecraft World banner showing classic characters and mobs gathered beneath a stone arch framed by blocky trees and terrain."
+      }
+    },
+    {
+      "id": "b0052",
+      "type": "h1",
+      "source_text": "Minecraft World",
+      "translated_text": "Minecraft World",
+      "meta": {}
+    },
+    {
+      "id": "b0053",
+      "type": "p",
+      "source_text": "This is a big one! We’ve been working with Merlin Entertainments to create Minecraft World! The theme park land will be opening at London’s Chessington World of Adventures in 2027.",
+      "translated_text": "这是个大动作！我们一直与 Merlin Entertainments 合作，共同打造 Minecraft World！该主题乐园园区将于 2027 年在伦敦的 Chessington World of Adventures 开放。",
+      "meta": {}
+    },
+    {
+      "id": "b0054",
+      "type": "p",
+      "source_text": "Minecraft World will be packed with attractions and things to do. We’re planning the first ever Minecraft rollercoaster, the world’s biggest Minecraft shop, tasty Minecraft-themed food, opportunities to meet the mobs, and lots more. This is a truly epic collaboration between Mojang Studios and Merlin Entertainments, but we also recruited creators to help with some of the trickier challenges. We’ll share more on Minecraft World soon.",
+      "translated_text": "Minecraft World 将布满各种游乐设施和体验项目。我们计划打造首个 Minecraft 过山车、世界上最大的 Minecraft 商店、美味的 Minecraft 主题美食、与生物见面的机会，以及更多内容。这是 Mojang 工作室与 Merlin Entertainments 之间一次真正史诗级的合作，我们还邀请了创作者来协助解决一些更棘手的挑战。我们会很快分享更多关于 Minecraft World 的消息。",
+      "meta": {}
+    },
+    {
+      "id": "b0055",
+      "type": "p",
+      "source_text": "DISCLAIMER: Daisy and Filip’s enthusiasm for Minecraft’s real-life smell and taste might inspire you to lick a controller or chew on some official merchandise, but this is not recommended unless you’re a dog and get permission from your owner. Thanks.",
+      "translated_text": "免责声明：Daisy 和 Filip 对《Minecraft》（Java 版）现实中闻起来和尝起来的热情可能会让你想去舔手柄或咬官方周边，但我们不推荐这么做，除非你是一只经主人许可的狗。谢谢。",
+      "meta": {}
+    },
+    {
+      "id": "b0056",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_ChaosCubed.jpg",
+        "alt": "A split Minecraft image shows colorful underground caves on the left, a floating cube creature in the center, and a glowing red stone temple interior on the right"
+      }
+    },
+    {
+      "id": "b0057",
+      "type": "h1",
+      "source_text": "Chaos Cubed",
+      "translated_text": "混沌立方",
+      "meta": {}
+    },
+    {
+      "id": "b0058",
+      "type": "p",
+      "source_text": "We also featured a first-ever look at our upcoming game drop: Chaos Cubed!",
+      "translated_text": "我们还首次公开展示了即将推出的游戏：《混沌立方》！",
+      "meta": {}
+    },
+    {
+      "id": "b0059",
+      "type": "p",
+      "source_text": "First, we showed off the brand-new sulfur caves. They might look warm and inviting but beware; this isn’t the best place for a relaxing dip. Those pools are downright noxious and cause a strange dizzying-style effect if you get too close! We’re also introducing two new block sets – cinnabar and sulfur.",
+      "translated_text": "首先，我们展示了全新的硫磺洞穴。它们看起来温暖又诱人，但要小心；这里并不适合悠闲浸泡。那些水池极具毒性，靠得太近会导致奇怪的眩晕类效果！我们还引入了两组新方块——辰砂与硫磺。",
+      "meta": {}
+    },
+    {
+      "id": "b0060",
+      "type": "p",
+      "source_text": "Though the new biome will be great to explore, our new mob, the sulfur cube, must be a highlight. Unlike any other mob in the game, it can absorb blocks! And its attributes change depending on what it’s consumed.",
+      "translated_text": "虽然这个新生物群系很值得探索，但我们的新生物——硫磺方块，必定是亮点。与游戏中其他生物不同，它能吞噬方块！而且它的属性会根据所吞噬的方块而改变。",
+      "meta": {}
+    },
+    {
+      "id": "b0061",
+      "type": "p",
+      "source_text": "Give it some wood and it might start acting a bit like a cubic “ball” type-thing. Let it consume ice and it will slide around, more like a chunky, oversized hockey puck. Develop your sulfur cube skills and you can pull off some amazing shots but like most things in Minecraft, things don’t always go exactly to plan! The sulfur cube can absorb loads of different block types, providing infinite potential for experimentation.",
+      "translated_text": "给它一些木头，它可能会开始表现得有点像立方体状的球。让它吞噬冰块，它就会滑动，更像是一个厚重又巨大的冰球。练就你的硫磺立方体技巧，你就能表演出一些惊人的操作，但和《Minecraft》里的大多数事物一样，事情并不总是按计划进行！硫磺立方体可以吸收大量不同的方块类型，提供无穷的实验可能性。",
+      "meta": {}
+    },
+    {
+      "id": "b0062",
+      "type": "p",
+      "source_text": "This mob allows for even more creativity in your builds and refined chaos in your mini-games. We showcase a few ideas in this segment but, like everything we bring to the game, we’re mostly excited to see what you get up to when Chaos Cubed enters testing.",
+      "translated_text": "这个生物让你的建筑更具创造力，并能在你的小游戏中带来更精致的混乱。我们在本段展示了一些想法，但正如我们为游戏带来的所有内容一样，我们更期待看到当 Chaos Cubed 进入测试时你们会做出什么。",
+      "meta": {}
+    },
+    {
+      "id": "b0063",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Spicewood.jpg",
+        "alt": "The Minecraft Dungeons II logo glows in gold and blue inside a dark stone dungeon lit by scattered torches"
+      }
+    },
+    {
+      "id": "b0064",
+      "type": "h1",
+      "source_text": "Minecraft Dungeons II",
+      "translated_text": "我的世界：地下城 II",
+      "meta": {}
+    },
+    {
+      "id": "b0065",
+      "type": "p",
+      "source_text": "It’s not often that we get to announce an entirely new game but here we go: [Minecraft Dungeons II is coming this year](https://www.minecraft.net/about-dungeons-ii)! This is an all-new action-RPG adventure where you’ll take on high-stakes encounters, thrilling challenges, and explore never-before-seen locations in the Minecraft universe. Of course, there will also be loot! Loads of it. Grab it all, or share with up to three friends as you co-operate to save a world in crisis.",
+      "translated_text": "我们很少有机会宣布全新游戏，但这次来了：[《我的世界：地下城 II》将于今年推出](https://www.minecraft.net/about-dungeons-ii)！这是一款全新的动作角色扮演冒险游戏，你将面对高风险遭遇、惊险挑战，并探索我的世界宇宙中前所未见的地点。当然，游戏中也会有战利品！大量战利品。全部拿走，或与最多三名朋友共享，合作拯救一个陷入危机的世界。",
+      "meta": {}
+    },
+    {
+      "id": "b0066",
+      "type": "p",
+      "source_text": "It might seem obvious but here we are: Minecraft Dungeons II is the sequel to Minecraft Dungeons. There’s never been a better time to catch up if you’re late to the party.",
+      "translated_text": "这看起来可能很明显，但事实就是：《我的世界：地下城 II》是《我的世界：地下城》的续作。如果你还没跟上，现在再好不过了。",
+      "meta": {}
+    },
+    {
+      "id": "b0067",
+      "type": "p",
+      "source_text": "Minecraft Dungeons II will be coming to Xbox Series X/S, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Steam, Xbox on PC, and Game Pass.",
+      "translated_text": "《我的世界：地下城 II》将登陆 Xbox Series X/S、PlayStation 5、任天堂 Switch、任天堂 Switch 2、Steam、Xbox on PC 以及 Game Pass。",
+      "meta": {}
+    },
+    {
+      "id": "b0068",
+      "type": "p",
+      "source_text": "We’ll share more news soon!",
+      "translated_text": "我们很快会分享更多消息！",
+      "meta": {}
+    },
+    {
+      "id": "b0069",
+      "type": "img",
+      "source_text": "",
+      "translated_text": "",
+      "meta": {
+        "src": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_DeepDig_NEW.jpg",
+        "alt": "A Minecraft Live The Deep Dig banner shows a top down view of a square arena with bold title text and a scoreboard reading Team 1 0–1 Team 2, framed by presenters on each side"
+      }
+    },
+    {
+      "id": "b0070",
+      "type": "h1",
+      "source_text": "The Deep Dig",
+      "translated_text": "深入挖掘",
+      "meta": {}
+    },
+    {
+      "id": "b0071",
+      "type": "p",
+      "source_text": "Chaos Cubed is one of the most intriguing game drops in quite some time! There’s just so much to show. Join Agnes, Jens, Elisabeth, Camman18, and Bekyamon as they discover the new features and face off in an incredibly intense selection of mini games featuring the awesome sulfur cube! Once again, credit to Vu for his admirable attempts to keep things running smoothly and understandable for you, our lovely viewers.",
+      "translated_text": "Chaos Cubed 是近年来最令人着迷的游戏内容之一！有太多东西值得展示。加入 Agnes、Jens、Elisabeth、Camman18 和 Bekyamon，一起探索新特性，并在一系列紧张刺激的迷你游戏中对决，特色是那个超酷的硫磺方块！再次感谢 Vu，他为确保一切顺利并让我们的观众易于理解所做出的可敬努力。",
+      "meta": {}
+    },
+    {
+      "id": "b0072",
+      "type": "p",
+      "source_text": "Thanks for watching Minecraft LIVE!",
+      "translated_text": "感谢观看 Minecraft LIVE！",
+      "meta": {}
+    }
+  ],
+  "content": "The Minecraft universe keeps expanding! New game drops make our world deeper and more immersive. Quality-of-life features help make the most of your play time. And our real-life experiences let you enjoy Minecraft in entirely new ways with friends and family. We’re even releasing new video games! The most recent Minecraft LIVE features all that good stuff and more!\n\nIt’s a lot to keep track of. But don’t get overwhelmed. Take a breath, sit back, and watch. Our developers will bring you all the news, bit by bit, in one handy show.\n\nWe’ve also prepared a written recap. This is good for situations where watching a video might be frowned upon or slightly unwise. For example, you could print it out and read in the bath for a safe and relaxing Minecraft LIVE experience. Get creative!\n\nThe Minecraft universe keeps expanding! New game drops make our world deeper and more immersive. Quality-of-life features help make the most of your play time. And our real-life experiences let you enjoy Minecraft in entirely new ways with friends and family. We’re even releasing new video games! The most recent Minecraft LIVE features all that good stuff and more!\n\nIt’s a lot to keep track of. But don’t get overwhelmed. Take a breath, sit back, and watch. Our developers will bring you all the news, bit by bit, in one handy show.\n\nWe’ve also prepared a written recap. This is good for situations where watching a video might be frowned upon or slightly unwise. For example, you could print it out and read in the bath for a safe and relaxing Minecraft LIVE experience. Get creative!\n\n[IMAGE:A colorful Minecraft Live banner showing bees, pigs, chickens, rabbits, and other mobs gathered in a bright grassy world beneath the Minecraft Live logo](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Main_Stream_864x505.jpg)\n\n[IMAGE:A split Minecraft scene shows a villager, baby animals, chicks, and bee themed mobs gathered on a platform at sunset with a glowing torch on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Tiny_Takeover.jpg)\n\nTiny Takeover\n\nYou might already be familiar with Tiny Takeover – our upcoming game drop that changes the look of almost every baby mob. Before this drop they looked like smaller versions of their adult equivalents. These were cute but, as Agnes declared as she clutched a chicken plush in a recent meeting: “Not cute enough!”\n\nNow every baby mob has its own distinct look, optimized for adorability.\n\nAgnes, Jasper, Sarah, and Felix talk about the inspiration behind the drop, and Sandra gets into the real-life challenges that come with being our Vanilla Audio Designer. Those pigs weren’t messing about.\n\n[IMAGE:A group of people stands inside a dark cave holding glowing cubes while looking through a window‑shaped opening into a bright Minecraft world filled with villages mobs and blue sky](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_Exp_MCLIVE26.jpg)\n\nNew Minecraft Experiences\n\nAs Torfi mentions, we continue to explore new ways to bring Minecraft to the real world. Minecraft Experience: Villager Rescue was the first of its kind, giving you a chance to mine resources, explore biomes, and even battle mobs in an immersive environment. This adventure is travelling the globe, and will soon arrive at Herning, Singapore, Mexico City, and Chicago. Check the official site for more details.\n\nWe’re also working on an entirely new experience that takes place in a real forest! Minecraft Experience: Moonlight Trail is an outdoor nighttime adventure that’ll open soon in Buenos Aires. It will also travel to other cities over time.\n\n[Learn more here!](https://www.minecraftexperience.com/)\n\n[IMAGE:A Minecraft World banner showing classic characters and mobs gathered beneath a stone arch framed by blocky trees and terrain.](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Minecraft_World.jpg)\n\nMinecraft World\n\nThis is a big one! We’ve been working with Merlin Entertainments to create Minecraft World! The theme park land will be opening at London’s Chessington World of Adventures in 2027.\n\nMinecraft World will be packed with attractions and things to do. We’re planning the first ever Minecraft rollercoaster, the world’s biggest Minecraft shop, tasty Minecraft-themed food, opportunities to meet the mobs, and lots more. This is a truly epic collaboration between Mojang Studios and Merlin Entertainments, but we also recruited creators to help with some of the trickier challenges. We’ll share more on Minecraft World soon.\n\nDISCLAIMER: Daisy and Filip’s enthusiasm for Minecraft’s real-life smell and taste might inspire you to lick a controller or chew on some official merchandise, but this is not recommended unless you’re a dog and get permission from your owner. Thanks.\n\n[IMAGE:A split Minecraft image shows colorful underground caves on the left, a floating cube creature in the center, and a glowing red stone temple interior on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_ChaosCubed.jpg)\n\nChaos Cubed\n\nWe also featured a first-ever look at our upcoming game drop: Chaos Cubed!\n\nFirst, we showed off the brand-new sulfur caves. They might look warm and inviting but beware; this isn’t the best place for a relaxing dip. Those pools are downright noxious and cause a strange dizzying-style effect if you get too close! We’re also introducing two new block sets – cinnabar and sulfur.\n\nThough the new biome will be great to explore, our new mob, the sulfur cube, must be a highlight. Unlike any other mob in the game, it can absorb blocks! And its attributes change depending on what it’s consumed.\n\nGive it some wood and it might start acting a bit like a cubic “ball” type-thing. Let it consume ice and it will slide around, more like a chunky, oversized hockey puck. Develop your sulfur cube skills and you can pull off some amazing shots but like most things in Minecraft, things don’t always go exactly to plan! The sulfur cube can absorb loads of different block types, providing infinite potential for experimentation.\n\nThis mob allows for even more creativity in your builds and refined chaos in your mini-games. We showcase a few ideas in this segment but, like everything we bring to the game, we’re mostly excited to see what you get up to when Chaos Cubed enters testing.\n\n[IMAGE:The Minecraft Dungeons II logo glows in gold and blue inside a dark stone dungeon lit by scattered torches](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Spicewood.jpg)\n\nMinecraft Dungeons II\n\nIt’s not often that we get to announce an entirely new game but here we go: [Minecraft Dungeons II is coming this year](https://www.minecraft.net/about-dungeons-ii)! This is an all-new action-RPG adventure where you’ll take on high-stakes encounters, thrilling challenges, and explore never-before-seen locations in the Minecraft universe. Of course, there will also be loot! Loads of it. Grab it all, or share with up to three friends as you co-operate to save a world in crisis.\n\nIt might seem obvious but here we are: Minecraft Dungeons II is the sequel to Minecraft Dungeons. There’s never been a better time to catch up if you’re late to the party.\n\nMinecraft Dungeons II will be coming to Xbox Series X/S, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Steam, Xbox on PC, and Game Pass.\n\nWe’ll share more news soon!\n\n[IMAGE:A Minecraft Live The Deep Dig banner shows a top down view of a square arena with bold title text and a scoreboard reading Team 1 0–1 Team 2, framed by presenters on each side](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_DeepDig_NEW.jpg)\n\nThe Deep Dig\n\nChaos Cubed is one of the most intriguing game drops in quite some time! There’s just so much to show. Join Agnes, Jens, Elisabeth, Camman18, and Bekyamon as they discover the new features and face off in an incredibly intense selection of mini games featuring the awesome sulfur cube! Once again, credit to Vu for his admirable attempts to keep things running smoothly and understandable for you, our lovely viewers.\n\nThanks for watching Minecraft LIVE!\n\n[IMAGE:A colorful Minecraft Live banner showing bees, pigs, chickens, rabbits, and other mobs gathered in a bright grassy world beneath the Minecraft Live logo](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Main_Stream_864x505.jpg)\n\n[IMAGE:A split Minecraft scene shows a villager, baby animals, chicks, and bee themed mobs gathered on a platform at sunset with a glowing torch on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Tiny_Takeover.jpg)\n\nTiny Takeover\n\nYou might already be familiar with Tiny Takeover – our upcoming game drop that changes the look of almost every baby mob. Before this drop they looked like smaller versions of their adult equivalents. These were cute but, as Agnes declared as she clutched a chicken plush in a recent meeting: “Not cute enough!”\n\nNow every baby mob has its own distinct look, optimized for adorability.\n\nAgnes, Jasper, Sarah, and Felix talk about the inspiration behind the drop, and Sandra gets into the real-life challenges that come with being our Vanilla Audio Designer. Those pigs weren’t messing about.\n\n[IMAGE:A group of people stands inside a dark cave holding glowing cubes while looking through a window‑shaped opening into a bright Minecraft world filled with villages mobs and blue sky](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_Exp_MCLIVE26.jpg)\n\nNew Minecraft Experiences\n\nAs Torfi mentions, we continue to explore new ways to bring Minecraft to the real world. Minecraft Experience: Villager Rescue was the first of its kind, giving you a chance to mine resources, explore biomes, and even battle mobs in an immersive environment. This adventure is travelling the globe, and will soon arrive at Herning, Singapore, Mexico City, and Chicago. Check the official site for more details.\n\nWe’re also working on an entirely new experience that takes place in a real forest! Minecraft Experience: Moonlight Trail is an outdoor nighttime adventure that’ll open soon in Buenos Aires. It will also travel to other cities over time.\n\n[Learn more here!](https://www.minecraftexperience.com/)\n\n[IMAGE:A Minecraft World banner showing classic characters and mobs gathered beneath a stone arch framed by blocky trees and terrain.](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Minecraft_World.jpg)\n\nMinecraft World\n\nThis is a big one! We’ve been working with Merlin Entertainments to create Minecraft World! The theme park land will be opening at London’s Chessington World of Adventures in 2027.\n\nMinecraft World will be packed with attractions and things to do. We’re planning the first ever Minecraft rollercoaster, the world’s biggest Minecraft shop, tasty Minecraft-themed food, opportunities to meet the mobs, and lots more. This is a truly epic collaboration between Mojang Studios and Merlin Entertainments, but we also recruited creators to help with some of the trickier challenges. We’ll share more on Minecraft World soon.\n\nDISCLAIMER: Daisy and Filip’s enthusiasm for Minecraft’s real-life smell and taste might inspire you to lick a controller or chew on some official merchandise, but this is not recommended unless you’re a dog and get permission from your owner. Thanks.\n\n[IMAGE:A split Minecraft image shows colorful underground caves on the left, a floating cube creature in the center, and a glowing red stone temple interior on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_ChaosCubed.jpg)\n\nChaos Cubed\n\nWe also featured a first-ever look at our upcoming game drop: Chaos Cubed!\n\nFirst, we showed off the brand-new sulfur caves. They might look warm and inviting but beware; this isn’t the best place for a relaxing dip. Those pools are downright noxious and cause a strange dizzying-style effect if you get too close! We’re also introducing two new block sets – cinnabar and sulfur.\n\nThough the new biome will be great to explore, our new mob, the sulfur cube, must be a highlight. Unlike any other mob in the game, it can absorb blocks! And its attributes change depending on what it’s consumed.\n\nGive it some wood and it might start acting a bit like a cubic “ball” type-thing. Let it consume ice and it will slide around, more like a chunky, oversized hockey puck. Develop your sulfur cube skills and you can pull off some amazing shots but like most things in Minecraft, things don’t always go exactly to plan! The sulfur cube can absorb loads of different block types, providing infinite potential for experimentation.\n\nThis mob allows for even more creativity in your builds and refined chaos in your mini-games. We showcase a few ideas in this segment but, like everything we bring to the game, we’re mostly excited to see what you get up to when Chaos Cubed enters testing.\n\n[IMAGE:The Minecraft Dungeons II logo glows in gold and blue inside a dark stone dungeon lit by scattered torches](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Spicewood.jpg)\n\nMinecraft Dungeons II\n\nIt’s not often that we get to announce an entirely new game but here we go: [Minecraft Dungeons II is coming this year](https://www.minecraft.net/about-dungeons-ii)! This is an all-new action-RPG adventure where you’ll take on high-stakes encounters, thrilling challenges, and explore never-before-seen locations in the Minecraft universe. Of course, there will also be loot! Loads of it. Grab it all, or share with up to three friends as you co-operate to save a world in crisis.\n\nIt might seem obvious but here we are: Minecraft Dungeons II is the sequel to Minecraft Dungeons. There’s never been a better time to catch up if you’re late to the party.\n\nMinecraft Dungeons II will be coming to Xbox Series X/S, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Steam, Xbox on PC, and Game Pass.\n\nWe’ll share more news soon!\n\n[IMAGE:A Minecraft Live The Deep Dig banner shows a top down view of a square arena with bold title text and a scoreboard reading Team 1 0–1 Team 2, framed by presenters on each side](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_DeepDig_NEW.jpg)\n\nThe Deep Dig\n\nChaos Cubed is one of the most intriguing game drops in quite some time! There’s just so much to show. Join Agnes, Jens, Elisabeth, Camman18, and Bekyamon as they discover the new features and face off in an incredibly intense selection of mini games featuring the awesome sulfur cube! Once again, credit to Vu for his admirable attempts to keep things running smoothly and understandable for you, our lovely viewers.\n\nThanks for watching Minecraft LIVE!",
+  "translated_content": "Minecraft 宇宙持续扩张！新的内容投放让我们的世界更丰富、更具沉浸感。便捷性功能让你的游玩时间更高效。线下体验则让你能与家人和朋友以全新的方式享受 Minecraft。我们甚至在推出新的电子游戏！最近的 Minecraft LIVE 展示了上述所有精彩内容以及更多！\n\n要跟上这些信息确实不少。但别被压垮。深呼吸，放松，坐下来看。我们的开发者会在一场便于观看的节目中，把所有新闻一点一滴地带给你。\n\n我们也准备了文字回顾。适用于在不方便或不宜观看视频的场景。例如，你可以把它打印出来，在浴缸里阅读，享受一次既安全又放松的 Minecraft LIVE 体验。发挥创意吧！\n\nMinecraft 世界持续扩展！新的内容发布让我们的世界更丰富、更具沉浸感。体验优化功能帮助你更好地利用游戏时间。线下体验让你可以与亲友用全新的方式享受 Minecraft。我们甚至还在推出全新电子游戏！最近一期 Minecraft LIVE 展示了这些精彩内容以及更多！\n\n要记的事情很多，但别感到不知所措。深呼吸，放松坐下，观看即可。我们的开发者会在一档便捷的节目中，一点一点为你带来所有消息。\n\n我们还准备了文字回顾。适合在观看视频不合适或略显不妥的场合使用。例如，你可以把它打印出来，在浴缸里阅读，享受一次安全又放松的 Minecraft LIVE 体验。发挥创意吧！\n\n[IMAGE:A colorful Minecraft Live banner showing bees, pigs, chickens, rabbits, and other mobs gathered in a bright grassy world beneath the Minecraft Live logo](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Main_Stream_864x505.jpg)\n\n[IMAGE:A split Minecraft scene shows a villager, baby animals, chicks, and bee themed mobs gathered on a platform at sunset with a glowing torch on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Tiny_Takeover.jpg)\n\n微型接管\n\n你可能已经熟悉 Tiny Takeover —— 我们即将推出的游戏更新，它改变了几乎所有幼年生物的外观。在此更新之前，它们看起来只是成体的缩小版。这固然可爱，但正如 Agnes 在最近一次会议上抱着一只鸡布偶宣称的那样：“还不够可爱！”\n\n现在每种幼年生物都有了独特的外观，并为更高的可爱度进行了优化。\n\nAgnes、Jasper、Sarah 和 Felix 讲述了本次更新背后的灵感来源；Sandra 则谈到作为我们原版音效设计师在现实中面临的挑战。那些猪可不是闹着玩的。\n\n[IMAGE:A group of people stands inside a dark cave holding glowing cubes while looking through a window‑shaped opening into a bright Minecraft world filled with villages mobs and blue sky](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_Exp_MCLIVE26.jpg)\n\n全新 Minecraft 体验\n\n正如 Torfi 所提，我们继续探索将 Minecraft 带入现实世界的新方式。Minecraft 体验：村民营救 是首个此类体验，让你在沉浸式环境中采集资源、探索生物群系，甚至与敌对生物战斗。该冒险正在全球巡展，即将抵达 Herning、新加坡、墨西哥城与芝加哥。更多详情请查看官方网站。\n\n我们还在打造一个全新的现场体验——发生在真实森林中！Minecraft 体验：月光小径 是一项户外夜间冒险活动，即将在布宜诺斯艾利斯开放，并将陆续巡回至其他城市。\n\n在此了解更多：https://www.minecraftexperience.com/\n\n[IMAGE:A Minecraft World banner showing classic characters and mobs gathered beneath a stone arch framed by blocky trees and terrain.](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Minecraft_World.jpg)\n\nMinecraft 世界\n\n这是个大消息！我们一直与 Merlin Entertainments 合作打造 Minecraft World！该主题乐园区域将于 2027 年在伦敦的 Chessington World of Adventures 开放。\n\nMinecraft World 将充满各类游乐设施与体验。我们计划打造首座 Minecraft 过山车、全球最大的 Minecraft 商店、美味的 Minecraft 主题餐点、与生物近距离接触的机会，以及更多精彩内容。这是 Mojang Studios 与 Merlin Entertainments 之间一次真正史诗级的合作，我们还邀请了创作者来协助解决一些更棘手的挑战。关于 Minecraft World 的更多信息我们会很快公布。\n\n免责声明：Daisy 和 Filip 对 Minecraft 真实气味与口感的热情可能会让你想去舔手柄或咬官方周边，但除非你是一只并且已获得主人允许的狗，否则不建议这么做。谢谢。\n\n[IMAGE:A split Minecraft image shows colorful underground caves on the left, a floating cube creature in the center, and a glowing red stone temple interior on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_ChaosCubed.jpg)\n\n混沌立方\n\n我们还首次展示了即将推出的新作：Chaos Cubed！\n\n首先，我们展示了全新的硫磺洞穴。它们看起来温暖而诱人，但要注意；这里并不是放松浸泡的好去处。那些池塘极其有害，靠得太近会产生一种奇怪的眩晕类效果！我们还将引入两组新方块——辰砂和硫磺。\n\n尽管这个新生物群系非常适合探索，但我们的新生物——硫磺立方体，才是重头戏。与游戏中任何其他生物不同，它可以吸收方块！而且它的属性会根据吞噬的方块发生变化。\n\n给它一些木头，它可能会开始像立方体版的“球”那样滚动。让它吞噬冰块，它就会滑行，更像是一块粗壮的超大号冰球。磨练你的硫磺方块怪技巧，你就能打出一些惊人的射门，但和 Minecraft 中的大多数事物一样，事情并不总是按计划进行！硫磺方块怪可以吸收大量不同类型的方块，带来无限实验可能。\n\n这个生物让你的建筑创意更丰富，也能为小游戏带来更精细的混乱。我们在本段展示了一些点子，但和我们带入游戏的所有内容一样，最让我们兴奋的还是在 Chaos Cubed 进入测试后看到你们会怎么发挥。\n\n[IMAGE:The Minecraft Dungeons II logo glows in gold and blue inside a dark stone dungeon lit by scattered torches](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Spicewood.jpg)\n\nMinecraft Dungeons II\n\n我们很少有机会宣布全新的游戏，但这次来了：[我的世界：地下城 II 将于今年推出](https://www.minecraft.net/about-dungeons-ii)！这是一款全新的动作角色扮演冒险，你将迎来高风险遭遇、刺激挑战，并探索我的世界宇宙中前所未见的地点。当然，也会有战利品！大量战利品。全部捡走，或与最多三名好友共享，合作拯救处于危机中的世界。\n\n这听起来很明显，但事实就是：我的世界：地下城 II 是《我的世界：地下城》的续作。如果你还没入手，现在正是补课的最佳时机。\n\n我的世界：地下城 II 将登陆 Xbox Series X/S、PlayStation 5、Nintendo Switch、Nintendo Switch 2、Steam、Xbox on PC 和 Game Pass。\n\n我们很快会分享更多消息！\n\n[IMAGE:A Minecraft Live The Deep Dig banner shows a top down view of a square arena with bold title text and a scoreboard reading Team 1 0–1 Team 2, framed by presenters on each side](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_DeepDig_NEW.jpg)\n\n深度挖掘\n\nChaos Cubed 是近期最引人入胜的游戏更新之一！内容丰富，值得细看。与 Agnes、Jens、Elisabeth、Camman18 和 Bekyamon 一同发现新功能，并在以惊艳的硫磺方块为特色的一系列激烈小游戏中一决高下！再次感谢 Vu，他在幕后努力让一切顺利并易于理解，献给我们可爱的观众们。\n\n感谢收看 Minecraft LIVE！\n\n[IMAGE:A colorful Minecraft Live banner showing bees, pigs, chickens, rabbits, and other mobs gathered in a bright grassy world beneath the Minecraft Live logo](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Main_Stream_864x505.jpg)\n\n[IMAGE:A split Minecraft scene shows a villager, baby animals, chicks, and bee themed mobs gathered on a platform at sunset with a glowing torch on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Tiny_Takeover.jpg)\n\nTiny Takeover\n\n你可能已经熟悉 Tiny Takeover —— 我们即将推出的游戏更新，它改变了几乎所有幼年生物的外观。在此更新之前，它们只是成年体的缩小版。虽然也很可爱，但正如 Agnes 在最近一次会议上抱着一只鸡玩偶时宣称的：“还不够可爱！”\n\n现在每种幼年生物都有独特的造型，经过专门优化以提升可爱度。\n\nAgnes、Jasper、Sarah 和 Felix 讲述了本次发布的灵感来源，Sandra 则谈到作为我们的原版音效设计师在现实中面临的挑战。那些猪可不是闹着玩的。\n\n[IMAGE:A group of people stands inside a dark cave holding glowing cubes while looking through a window‑shaped opening into a bright Minecraft world filled with villages mobs and blue sky](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Minecraft_Exp_MCLIVE26.jpg)\n\n全新 Minecraft 体验\n\n正如 Torfi 所提，我们持续探索将 Minecraft 带入现实世界的新方式。Minecraft Experience: Villager Rescue 是首个此类体验，让你在沉浸式场景中开采资源、探索生物群系，甚至与生物战斗。该冒险正在全球巡展，很快将抵达赫宁、新加坡、墨西哥城和芝加哥。详见官网。\n\n我们还在打造一项全新的体验，将在真实森林中进行！Minecraft Experience: Moonlight Trail 是一场户外夜间冒险，很快将在布宜诺斯艾利斯开放，随后也会在其他城市巡回。\n\n[了解更多！](https://www.minecraftexperience.com/)\n\n[IMAGE:A Minecraft World banner showing classic characters and mobs gathered beneath a stone arch framed by blocky trees and terrain.](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Minecraft_World.jpg)\n\nMinecraft World\n\n这是个大动作！我们一直与 Merlin Entertainments 合作，共同打造 Minecraft World！该主题乐园园区将于 2027 年在伦敦的 Chessington World of Adventures 开放。\n\nMinecraft World 将布满各种游乐设施和体验项目。我们计划打造首个 Minecraft 过山车、世界上最大的 Minecraft 商店、美味的 Minecraft 主题美食、与生物见面的机会，以及更多内容。这是 Mojang 工作室与 Merlin Entertainments 之间一次真正史诗级的合作，我们还邀请了创作者来协助解决一些更棘手的挑战。我们会很快分享更多关于 Minecraft World 的消息。\n\n免责声明：Daisy 和 Filip 对《Minecraft》（Java 版）现实中闻起来和尝起来的热情可能会让你想去舔手柄或咬官方周边，但我们不推荐这么做，除非你是一只经主人许可的狗。谢谢。\n\n[IMAGE:A split Minecraft image shows colorful underground caves on the left, a floating cube creature in the center, and a glowing red stone temple interior on the right](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_ChaosCubed.jpg)\n\n混沌立方\n\n我们还首次公开展示了即将推出的游戏：《混沌立方》！\n\n首先，我们展示了全新的硫磺洞穴。它们看起来温暖又诱人，但要小心；这里并不适合悠闲浸泡。那些水池极具毒性，靠得太近会导致奇怪的眩晕类效果！我们还引入了两组新方块——辰砂与硫磺。\n\n虽然这个新生物群系很值得探索，但我们的新生物——硫磺方块，必定是亮点。与游戏中其他生物不同，它能吞噬方块！而且它的属性会根据所吞噬的方块而改变。\n\n给它一些木头，它可能会开始表现得有点像立方体状的球。让它吞噬冰块，它就会滑动，更像是一个厚重又巨大的冰球。练就你的硫磺立方体技巧，你就能表演出一些惊人的操作，但和《Minecraft》里的大多数事物一样，事情并不总是按计划进行！硫磺立方体可以吸收大量不同的方块类型，提供无穷的实验可能性。\n\n这个生物让你的建筑更具创造力，并能在你的小游戏中带来更精致的混乱。我们在本段展示了一些想法，但正如我们为游戏带来的所有内容一样，我们更期待看到当 Chaos Cubed 进入测试时你们会做出什么。\n\n[IMAGE:The Minecraft Dungeons II logo glows in gold and blue inside a dark stone dungeon lit by scattered torches](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_Spicewood.jpg)\n\n我的世界：地下城 II\n\n我们很少有机会宣布全新游戏，但这次来了：[《我的世界：地下城 II》将于今年推出](https://www.minecraft.net/about-dungeons-ii)！这是一款全新的动作角色扮演冒险游戏，你将面对高风险遭遇、惊险挑战，并探索我的世界宇宙中前所未见的地点。当然，游戏中也会有战利品！大量战利品。全部拿走，或与最多三名朋友共享，合作拯救一个陷入危机的世界。\n\n这看起来可能很明显，但事实就是：《我的世界：地下城 II》是《我的世界：地下城》的续作。如果你还没跟上，现在再好不过了。\n\n《我的世界：地下城 II》将登陆 Xbox Series X/S、PlayStation 5、任天堂 Switch、任天堂 Switch 2、Steam、Xbox on PC 以及 Game Pass。\n\n我们很快会分享更多消息！\n\n[IMAGE:A Minecraft Live The Deep Dig banner shows a top down view of a square arena with bold title text and a scoreboard reading Team 1 0–1 Team 2, framed by presenters on each side](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NET_assets_Article_1280x720_DeepDig_NEW.jpg)\n\n深入挖掘\n\nChaos Cubed 是近年来最令人着迷的游戏内容之一！有太多东西值得展示。加入 Agnes、Jens、Elisabeth、Camman18 和 Bekyamon，一起探索新特性，并在一系列紧张刺激的迷你游戏中对决，特色是那个超酷的硫磺方块！再次感谢 Vu，他为确保一切顺利并让我们的观众易于理解所做出的可敬努力。\n\n感谢观看 Minecraft LIVE！",
+  "source": "minecraft_api"
+}
