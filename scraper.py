@@ -680,7 +680,8 @@ def parse_article_page(article_url):
                 seen_containers.add(signature)
             extract_blocks_in_order(container, blocks, base_url=article_url)
 
-        # 去连续重复
+        # 智能去重：去除连续重复 + 检测大段重复
+        # 第一步：去除连续重复
         deduplicated = []
         prev_key = None
         for block in blocks:
@@ -693,6 +694,85 @@ def parse_article_page(article_url):
                 continue
             prev_key = key
             deduplicated.append(block)
+
+        # 第二步：检测并移除大段重复（连续5个以上block重复）
+        def find_duplicate_sequences(blocks, min_length=5):
+            """查找重复的连续序列"""
+            n = len(blocks)
+            duplicates = []
+
+            for i in range(n - min_length + 1):
+                # 生成当前位置开始的序列签名
+                seq_keys = []
+                for j in range(i, min(i + 20, n)):  # 最多检查20个连续block
+                    key = (
+                        blocks[j].get("type"),
+                        (blocks[j].get("source_text") or "").strip(),
+                        json.dumps(blocks[j].get("meta") or {}, sort_keys=True, ensure_ascii=False),
+                    )
+                    seq_keys.append(key)
+
+                # 在后续位置查找相同序列
+                for k in range(i + min_length, n - min_length + 1):
+                    match_length = 0
+                    for offset in range(min(len(seq_keys), n - k)):
+                        key_k = (
+                            blocks[k + offset].get("type"),
+                            (blocks[k + offset].get("source_text") or "").strip(),
+                            json.dumps(blocks[k + offset].get("meta") or {}, sort_keys=True, ensure_ascii=False),
+                        )
+                        if seq_keys[offset] == key_k:
+                            match_length += 1
+                        else:
+                            break
+
+                    if match_length >= min_length:
+                        duplicates.append((k, k + match_length))
+
+            return duplicates
+
+        # 查找重复序列
+        duplicate_ranges = find_duplicate_sequences(deduplicated, min_length=5)
+
+        # 标记要删除的索引
+        indices_to_remove = set()
+        for start, end in duplicate_ranges:
+            for idx in range(start, end):
+                indices_to_remove.add(idx)
+
+        # 移除重复序列
+        if indices_to_remove:
+            print(f"[去重] 检测到大段重复，移除 {len(indices_to_remove)} 个block")
+            deduplicated = [block for idx, block in enumerate(deduplicated) if idx not in indices_to_remove]
+
+        # 第三步：去除长文本的非连续重复（可能是容器级重复导致的单个block重复）
+        final_blocks = []
+        seen_long_texts = {}  # {text_hash: first_index}
+
+        for idx, block in enumerate(deduplicated):
+            source_text = (block.get("source_text") or "").strip()
+            block_type = block.get("type")
+
+            # 只对长文本（>80字符）且非列表项的block进行去重
+            if len(source_text) > 80 and block_type not in ("li",):
+                text_key = (
+                    block_type,
+                    source_text,
+                    json.dumps(block.get("meta") or {}, sort_keys=True, ensure_ascii=False),
+                )
+
+                if text_key in seen_long_texts:
+                    first_idx = seen_long_texts[text_key]
+                    # 如果两次出现间隔较近（<15个block），认为是异常重复，跳过
+                    if idx - first_idx < 15:
+                        print(f"[去重] 跳过长文本重复 (间隔{idx - first_idx}): {source_text[:50]}...")
+                        continue
+                else:
+                    seen_long_texts[text_key] = idx
+
+            final_blocks.append(block)
+
+        deduplicated = final_blocks
 
         for i, block in enumerate(deduplicated):
             block["id"] = f"b{i+1:04d}"
