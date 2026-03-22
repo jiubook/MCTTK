@@ -637,7 +637,7 @@ class MCBBSPoster:
             title = meta.get("title", "").strip()
         if not title:
             raise ValueError(f"{json_path} 中找不到 title 字段")
-        title = title + "[AI翻译]"
+        title = title + " [AI翻译]"
 
         with open(txt_path, "r", encoding="utf-8") as f:
             message = f.read().strip()
