@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# 安装 git
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
+# 从 git 拉取代码
+RUN git clone -b docker https://github.com/你的用户名/MCTTK.git .
+
+# 安装依赖
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 创建输出目录
+RUN mkdir -p output
+
+CMD ["python", "scheduler.py"]
