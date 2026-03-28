@@ -360,7 +360,11 @@ def extract_blocks_in_order(container: Tag, blocks: list, base_url: str = ""):
             heading_text = re.sub(r'<https?://[^>]+>$', '', heading_text).strip()
             add_text_block(tag_name, heading_text)
             return
-        if tag_name in ("p", "blockquote"):
+        if tag_name == "p":
+            para_text = _extract_text_preserve_links(node, base_url=base_url)
+            add_text_block(tag_name, para_text)
+            return
+        if tag_name == "blockquote":
             para_text = _extract_text_preserve_links(node, base_url=base_url)
             add_text_block(tag_name, para_text)
             return
@@ -758,6 +762,12 @@ def parse_article_page(article_url):
         if intro:
             candidates.append(intro)
         candidates.extend(soup.find_all("div", class_="article-section"))
+
+        # 只提取 MC_AEM_Wrapper 中的 blockquote
+        for wrapper in soup.find_all("div", class_="MC_AEM_Wrapper"):
+            blockquotes = wrapper.find_all("blockquote")
+            for bq in blockquotes:
+                candidates.append(bq)
 
         for container in candidates:
             signature = _container_signature(container)
