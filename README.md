@@ -1,6 +1,6 @@
 # MinecraftTranslationToolkit
 
-> MCTTK
+> 矿译通 MCTTK
 
 > Minecraft 新闻自动爬取 + 翻译 + 发布
 
