@@ -161,7 +161,10 @@ def load_glossary(glossary_path: str = None) -> dict:
     try:
         with open(glossary_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return data.get("terms", {})
+        return {
+            "terms": data.get("terms", {}),
+            "placeholders": data.get("placeholders", {})
+        }
     except (json.JSONDecodeError, IOError) as e:
         print(f"[词汇表] 加载失败: {e}")
         return {}
@@ -169,37 +172,115 @@ def load_glossary(glossary_path: str = None) -> dict:
 GLOSSARY = load_glossary()
 
 
+def _parse_pattern(pattern: str) -> tuple:
+    """
+    解析模式字符串，返回 (基础词, 正则表达式, 是否有可选后缀)
+
+    例如:
+    - "undead * (mobs)" -> ("undead", r"undead\s+\w+(?:\s+mobs)?", True)
+    - "baby *" -> ("baby", r"baby(?:\s+\w+)?", False)
+    """
+    import re as regex_module
+
+    # 提取可选后缀 (xxx)
+    optional_suffix = ""
+    has_optional = False
+    if pattern.endswith(")"):
+        match = regex_module.search(r'\(([^)]+)\)$', pattern)
+        if match:
+            optional_suffix = match.group(1)
+            pattern = pattern[:match.start()].strip()
+            has_optional = True
+
+    # 计算 * 的数量
+    star_count = pattern.count("*")
+    base_term = pattern.replace("*", "").strip()
+
+    # 构建正则表达式
+    if star_count == 0:
+        # 无通配符，精确匹配
+        regex_pattern = regex_module.escape(pattern)
+    else:
+        parts = pattern.split("*")
+        regex_parts = []
+        for i, part in enumerate(parts):
+            part = part.strip()
+            if part:
+                regex_parts.append(regex_module.escape(part))
+            if i < len(parts) - 1:  # 不是最后一个
+                # * 匹配 0-1 个词
+                regex_parts.append(r"(?:\s+\w+)?")
+        regex_pattern = "".join(regex_parts)
+
+    # 添加可选后缀
+    if has_optional:
+        regex_pattern += r"(?:\s+" + regex_module.escape(optional_suffix) + r")?"
+
+    return (base_term, regex_pattern, has_optional)
+
+
 def find_relevant_terms(text: str, glossary: dict) -> dict:
     """
-    从文本中查找相关的专业术语
+    从文本中查找相关的专业术语，当词条重叠时优先匹配更长的
+    支持模糊匹配: * 表示0-1个词, (xxx) 表示可选后缀
 
     Args:
         text: 待翻译的文本
-        glossary: 词汇表字典 {英文: 中文}
+        glossary: 词汇表字典 {"terms": {英文: 中文}, "placeholders": {...}}
 
     Returns:
-        相关术语的字典 {英文: 中文}
+        相关术语的字典 {基础词: 中文}
     """
     if not text or not glossary:
         return {}
 
-    relevant = {}
-    text_lower = text.lower()
+    terms = glossary.get("terms", {})
+    if not terms:
+        return {}
 
-    for en_term, zh_term in glossary.items():
-        # 不区分大小写查找
-        if en_term.lower() in text_lower:
-            relevant[en_term] = zh_term
+    import re as regex_module
+    text_lower = text.lower()
+    matches = []
+
+    # 找出所有匹配及其位置
+    for en_term, zh_term in terms.items():
+        base_term, regex_pattern, _ = _parse_pattern(en_term)
+
+        # 使用正则匹配
+        for match in regex_module.finditer(regex_pattern, text_lower, regex_module.IGNORECASE):
+            start, end = match.span()
+            matches.append((start, end, base_term, zh_term))
+
+    # 按位置和长度排序
+    matches.sort(key=lambda x: (x[0], -(x[1] - x[0])))
+
+    # 过滤重叠的匹配
+    filtered = []
+    for match in matches:
+        start, end, base_term, zh_term = match
+        overlaps = False
+        for f_start, f_end, _, _ in filtered:
+            if not (end <= f_start or start >= f_end):
+                overlaps = True
+                break
+        if not overlaps:
+            filtered.append(match)
+
+    # 转为字典（去重）
+    relevant = {}
+    for _, _, base_term, zh_term in filtered:
+        relevant[base_term] = zh_term
 
     return relevant
 
 
-def build_glossary_prompt(relevant_terms: dict) -> str:
+def build_glossary_prompt(relevant_terms: dict, placeholders: dict = None) -> str:
     """
-    根据相关术语构建提示词片段
+    根据相关术语构建提示词片段，支持占位符替换
 
     Args:
         relevant_terms: 相关术语字典 {英文: 中文}
+        placeholders: 占位符配置 {占位符: 说明}
 
     Returns:
         提示词字符串
@@ -207,7 +288,19 @@ def build_glossary_prompt(relevant_terms: dict) -> str:
     if not relevant_terms:
         return ""
 
-    terms_list = [f"  - {en} → {zh}" for en, zh in relevant_terms.items()]
+    placeholders = placeholders or {}
+    terms_list = []
+    for en, zh in relevant_terms.items():
+        zh_expanded = zh
+        # 将占位符替换为对应的说明文字或英文原词
+        for placeholder, description in placeholders.items():
+            if placeholder in zh_expanded:
+                if placeholder == "(*)":
+                    zh_expanded = zh_expanded.replace(placeholder, f"({en})")
+                else:
+                    zh_expanded = zh_expanded.replace(placeholder, f"({description})")
+        terms_list.append(f"  - {en} → {zh_expanded}")
+
     prompt = "\n专业术语对照（请严格使用以下译名）：\n" + "\n".join(terms_list)
     return prompt
 
@@ -567,7 +660,7 @@ def translate_text(text, system_prompt=None, use_glossary=True):
     if use_glossary and GLOSSARY:
         relevant_terms = find_relevant_terms(text, GLOSSARY)
         if relevant_terms:
-            glossary_prompt = build_glossary_prompt(relevant_terms)
+            glossary_prompt = build_glossary_prompt(relevant_terms, GLOSSARY.get("placeholders", {}))
             system_prompt = system_prompt + glossary_prompt
             print(f"[词汇表] 添加 {len(relevant_terms)} 个相关术语到提示词")
 
@@ -949,7 +1042,7 @@ def translate_blocks(blocks: list) -> list:
             batch_texts = " ".join([item.get("text", "") for item in batch])
             relevant_terms = find_relevant_terms(batch_texts, GLOSSARY)
             if relevant_terms:
-                glossary_prompt = build_glossary_prompt(relevant_terms)
+                glossary_prompt = build_glossary_prompt(relevant_terms, GLOSSARY.get("placeholders", {}))
                 batch_system_prompt = system_prompt + glossary_prompt
                 print(f"[词汇表] 批次 {batch_index + 1} 添加 {len(relevant_terms)} 个术语")
 

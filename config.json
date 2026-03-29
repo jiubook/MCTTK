@@ -39,7 +39,7 @@
     "download":    { "max_retries": 3, "wait_for_input": false }
   },
   "concurrency": {
-    "translation_workers": 3,
+    "translation_workers": 8,
     "batch_max_chars": 1000,
     "batch_max_items": 10
   },

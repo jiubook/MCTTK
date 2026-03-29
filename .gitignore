@@ -27,6 +27,7 @@ build/
 # 调试文件
 debug*.*
 test*.*
+glossary_*.json
 
 # IDE
 .vscode/
