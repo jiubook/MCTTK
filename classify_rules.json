@@ -9,7 +9,7 @@
   "rules": [
     {
       "type": "java_snapshot",
-      "pattern": "\\b\\d{2}w\\d{2}[a-z]\\b",
+      "pattern": "\\b\\d{2}w\\d{2}[a-z]\\b|\\b(?:minecraft|java\\s*edition)[\\s\\S]*?snapshot\\b",
       "exclude": [],
       "require_chinese": true,
       "chinese_keywords": ["快照"]
@@ -23,35 +23,35 @@
     },
     {
       "type": "java_rc",
-      "pattern": "\\brelease\\s+candidate\\b",
+      "pattern": "\\brelease[-\\s]+candidate\\b",
       "exclude": [],
       "require_chinese": true,
       "chinese_keywords": ["候选", "候选版本"]
     },
     {
       "type": "bedrock_beta",
-      "pattern": "\\b(?:beta|preview)\\b.*?\\b1\\.\\d+(?:\\.\\d+){0,2}\\b|\\b1\\.\\d+(?:\\.\\d+){0,2}\\b.*?\\b(?:beta|preview)\\b",
+      "pattern": "\\b(?:beta|preview)\\b[\\s\\S]*?\\d{2,}",
       "exclude": [],
       "require_chinese": true,
       "chinese_keywords": ["预览", "测试版"]
     },
     {
       "type": "bedrock_release",
-      "pattern": "bedrock\\s+edition.*?\\b1\\.\\d+(?:\\.\\d+)?\\b|\\b1\\.\\d+(?:\\.\\d+)?\\b.*?bedrock\\s+edition|\\b基岩版\\b.*?\\b1\\.\\d+(?:\\.\\d+)?\\b|\\b1\\.\\d+(?:\\.\\d+)?\\b.*?\\b基岩版\\b",
+      "pattern": "bedrock[\\s\\S]*?(?:edition|changelog)|\\b基岩版\\b",
       "exclude": ["\\bcaption", "\\bsubtitle", "\\blocali[sz]", "\\btranslation\\b", "\\baccessibility\\b"],
       "require_chinese": true,
       "chinese_keywords": ["基岩版"]
     },
     {
       "type": "java_release",
-      "pattern": "java\\s+edition.*?\\b1\\.\\d+(?:\\.\\d+)?\\b|\\b1\\.\\d+(?:\\.\\d+)?\\b.*?java\\s+edition",
-      "exclude": ["\\bsnapshot\\b", "\\bpre[-\\s]?release\\b", "\\brelease\\s+candidate\\b"],
+      "pattern": "java[-\\s]*edition[\\s\\S]*?\\d{2,}|\\d{2,}[\\s\\S]*?java[-\\s]*edition",
+      "exclude": ["\\bsnapshot\\b", "\\bpre[-\\s]?release\\b", "\\brelease[-\\s]+candidate\\b"],
       "require_chinese": true,
       "chinese_keywords": ["Java版"]
     },
     {
       "type": "host",
-      "pattern": "\\b(?:xbox|nintendo\\s*switch|playstation|ps[45]\\b|switch\\s*版)",
+      "pattern": "\\b(?:xbox|nintendo[-\\s]*switch|playstation|ps[45]\\b|switch\\s*版)",
       "exclude": [],
       "require_chinese": false,
       "chinese_keywords": ["主机"]
