@@ -746,7 +746,11 @@ class MCBBSPoster:
                 news_type = classify_article_type(title, chinese=True, fallback=None)
             highlight_color = HIGHLIGHT_COLOR_MAP.get(news_type, 0) if news_type else 0
             if highlight_color:
-                color_names = {1: "红色(正式版)", 2: "橙色(主机)", 4: "绿色(快照/测试版)", 6: "蓝色(周边)", 8: "粉色(快讯)"}
+                color_names = {
+                    1: "红色(正式版)", 2: "橙色(主机)",
+                    4: "绿色(快照/测试版)", 6: "蓝色(周边)",
+                    8: "粉色(快讯)",
+                }
                 print(f"    高亮: {color_names.get(highlight_color, str(highlight_color))}")
                 if self._apply_highlight(post_url, highlight_color):
                     print("    ✓ 高亮设置成功！")

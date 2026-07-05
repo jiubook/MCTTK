@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """utils.py — 项目公共工具函数"""
 
+import contextlib
 import json
 import os
 import re
@@ -65,10 +66,8 @@ def _load_classify_rules(rules_path: str = None) -> list:
             continue
         excludes = []
         for ex in rule.get("exclude", []):
-            try:
+            with contextlib.suppress(re.error):
                 excludes.append(re.compile(ex, re.IGNORECASE))
-            except re.error:
-                pass
         compiled.append({
             "type": rule["type"],
             "pattern": pattern,
@@ -119,9 +118,8 @@ def classify_article_type(
         if rule["pattern"].search(t):
             return rule["type"]
         # 中文关键词匹配（仅当 chinese=True 且规则启用时）
-        if chinese and rule["require_chinese"]:
-            if any(kw in t for kw in rule["chinese_keywords"]):
-                return rule["type"]
+        if chinese and rule["require_chinese"] and any(kw in t for kw in rule["chinese_keywords"]):
+            return rule["type"]
 
     # 时评（向后兼容）
     if commentary and ("时评" in t or "commentary" in t.lower()):
