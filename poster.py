@@ -620,49 +620,48 @@ class MCBBSPoster:
                 self.session.headers.pop("Referer", None)
                 return False
 
-            # 从返回的表单中提取 formhash 和 action URL
-            form_action = re.search(
-                r'<form[^>]*action="([^"]*moderate[^"]*)"', r_get.text
-            )
-            form_formhash = re.search(
-                r'name="formhash"\s+value="([a-f0-9]+)"', r_get.text
-            )
-            if not form_action or not form_formhash:
-                print("    ⚠ 无法提取高亮表单参数")
+            # 从返回的表单中提取 formhash
+            form_fh = re.search(r'name="formhash"\s+value="([a-f0-9]+)"', r_get.text)
+            if not form_fh:
+                print("    ⚠ 无法提取高亮表单 formhash")
                 self.session.headers.pop("Referer", None)
                 return False
 
-            action_url = form_action.group(1).replace('&amp;', '&')
-            if action_url.startswith('./'):
-                action_url = action_url[2:]
-            full_action_url = f"{self.base_url}/{action_url}"
-
-            # 提交高亮
+            # 提交高亮（Discuz topicadmin 标准参数）
+            action_url = (
+                f"{self.base_url}/forum.php?mod=topicadmin&action=moderate"
+                f"&optgroup=1&modsubmit=yes&infloat=yes"
+            )
             post_data = {
-                "formhash": form_formhash.group(1),
+                "formhash": form_fh.group(1),
                 "fid": str(self.forum_fid),
-                "operation": "highlight",
-                "optgroup": "1",
-                "highlight_color": str(highlight_color),
-                "modsubmit": "yes",
-                "redirect": f"{self.base_url}/./thread-{tid}-1-1.html",
+                "redirect": f"{self.base_url}/thread-{tid}-1-1.html",
                 "handlekey": "mods",
+                "moderate[]": tid,
+                "operations[]": "highlight",
+                "highlight_color": str(highlight_color),
+                "highlight_style[1]": "0",
+                "highlight_style[2]": "0",
+                "highlight_style[3]": "0",
+                "highlight_bgcolor": "",
+                "expirationhighlight": "",
+                "sendreasonpm": "on",
             }
 
-            r_post = self.session.post(full_action_url, data=post_data)
+            r_post = self.session.post(action_url, data=post_data)
             self.session.headers.pop("Referer", None)
 
             # 检查结果
             resp = r_post.text
-            if "succeedhandle" in resp or "成功" in resp or r_post.status_code in (200, 301, 302):
+            if "succeedhandle" in resp or "成功" in resp:
                 return True
             if "没有权限" in resp:
                 print("    ⚠ 高亮失败: 账号无管理权限")
                 return False
-            # Discuz AJAX 成功响应通常是 XML
-            if "<root>" in resp and "errorhandle" not in resp:
-                return True
-            print(f"    ⚠ 高亮响应异常 (HTTP {r_post.status_code}): {resp[:200]}")
+            if "errorhandle" in resp:
+                err_m = re.search(r"errorhandle[^']*'([^']+)'", resp)
+                print(f"    ⚠ 高亮失败: {err_m.group(1) if err_m else '未知错误'}")
+                return False
             return False
         except Exception as e:
             print(f"    ⚠ 高亮失败: {e}")
