@@ -1,0 +1,67 @@
+{
+  "_comment": "新闻类型分类规则 - 按优先级从高到低排列，首个匹配的规则生效",
+  "_doc": {
+    "pattern": "正则表达式（不区分大小写）",
+    "exclude": "排除模式列表 - 标题命中任一排除模式则跳过该规则",
+    "require_chinese": "是否也检测中文关键词",
+    "chinese_keywords": "中文关键词列表（任一命中即匹配）"
+  },
+  "rules": [
+    {
+      "type": "java_snapshot",
+      "pattern": "\\b\\d{2}w\\d{2}[a-z]\\b",
+      "exclude": [],
+      "require_chinese": true,
+      "chinese_keywords": ["快照"]
+    },
+    {
+      "type": "java_prerelease",
+      "pattern": "\\bpre[-\\s]?release\\b",
+      "exclude": [],
+      "require_chinese": true,
+      "chinese_keywords": ["预发布", "预发布版"]
+    },
+    {
+      "type": "java_rc",
+      "pattern": "\\brelease\\s+candidate\\b",
+      "exclude": [],
+      "require_chinese": true,
+      "chinese_keywords": ["候选", "候选版本"]
+    },
+    {
+      "type": "bedrock_beta",
+      "pattern": "\\b(?:beta|preview)\\b.*?\\b1\\.\\d+(?:\\.\\d+){0,2}\\b|\\b1\\.\\d+(?:\\.\\d+){0,2}\\b.*?\\b(?:beta|preview)\\b",
+      "exclude": [],
+      "require_chinese": true,
+      "chinese_keywords": ["预览", "测试版"]
+    },
+    {
+      "type": "bedrock_release",
+      "pattern": "bedrock\\s+edition.*?\\b1\\.\\d+(?:\\.\\d+)?\\b|\\b1\\.\\d+(?:\\.\\d+)?\\b.*?bedrock\\s+edition|\\b基岩版\\b.*?\\b1\\.\\d+(?:\\.\\d+)?\\b|\\b1\\.\\d+(?:\\.\\d+)?\\b.*?\\b基岩版\\b",
+      "exclude": ["\\bcaption", "\\bsubtitle", "\\blocali[sz]", "\\btranslation\\b", "\\baccessibility\\b"],
+      "require_chinese": true,
+      "chinese_keywords": ["基岩版"]
+    },
+    {
+      "type": "java_release",
+      "pattern": "java\\s+edition.*?\\b1\\.\\d+(?:\\.\\d+)?\\b|\\b1\\.\\d+(?:\\.\\d+)?\\b.*?java\\s+edition",
+      "exclude": ["\\bsnapshot\\b", "\\bpre[-\\s]?release\\b", "\\brelease\\s+candidate\\b"],
+      "require_chinese": true,
+      "chinese_keywords": ["Java版"]
+    },
+    {
+      "type": "host",
+      "pattern": "\\b(?:xbox|nintendo\\s*switch|playstation|ps[45]\\b|switch\\s*版)",
+      "exclude": [],
+      "require_chinese": false,
+      "chinese_keywords": ["主机"]
+    },
+    {
+      "type": "flash",
+      "pattern": "\\bflash\\b|快讯|速报",
+      "exclude": [],
+      "require_chinese": true,
+      "chinese_keywords": ["快讯", "速报"]
+    }
+  ]
+}

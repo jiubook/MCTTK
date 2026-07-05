@@ -39,6 +39,22 @@ _CATEGORY_GROUP = {
     'bedrock_release': '基岩版资讯',
     'commentary': '块讯',
     'normal': '块讯',
+    'host': '主机资讯',
+    'flash': '快讯',
+}
+
+# 高亮颜色映射（news_type → Discuz highlight_color 值）
+# 对应 MCBBS 管理操作中的高亮设定
+HIGHLIGHT_COLOR_MAP = {
+    'java_release': 1,      # 正式版 #EE1B2E
+    'bedrock_release': 1,   # 正式版 #EE1B2E
+    'java_snapshot': 4,     # 快照/预览版 #3C9D40
+    'java_prerelease': 4,   # 预发布版 #3C9D40
+    'java_rc': 4,           # 候选版本 #3C9D40
+    'bedrock_beta': 4,      # 测试版 #3C9D40
+    'flash': 8,             # 快讯 #EC1282
+    'host': 2,              # 主机资讯 #EE5023
+    'peripheral': 6,        # 周边消息 #2B65B7
 }
 
 UA = (
@@ -562,6 +578,54 @@ class MCBBSPoster:
 
         raise RuntimeError(f"发帖结果不明: {r.url}")
 
+    def _apply_highlight(self, thread_url: str, highlight_color: int) -> bool:
+        """对已发帖子应用高亮（Discuz 管理操作）"""
+        if not self.session:
+            return False
+        if highlight_color <= 0:
+            return False
+
+        tid_match = re.search(r'thread-(\d+)-', thread_url)
+        if not tid_match:
+            print("    ⚠ 无法提取帖子 ID，跳过高亮")
+            return False
+        tid = tid_match.group(1)
+
+        try:
+            # 获取 formhash（如果尚未获取）
+            if not self.formhash:
+                r = self.session.get(f"{self.base_url}/forum.php")
+                r.raise_for_status()
+                self.formhash = extract_formhash(r.text)
+
+            # 提交高亮请求
+            modcp_url = f"{self.base_url}/modcp.php?operation=highlight&tid={tid}&infloat=yes&inajax=1"
+            referer = f"{self.base_url}/thread-{tid}-1-1.html"
+            self.session.headers.update({"Referer": referer, "X-Requested-With": "XMLHttpRequest"})
+
+            r = self.session.post(
+                modcp_url,
+                data={
+                    "formhash": self.formhash,
+                    "highlight_color": str(highlight_color),
+                    "highlight_submit": "提交",
+                    "handlesubmit": "提交",
+                },
+            )
+            self.session.headers.pop("Referer", None)
+            self.session.headers.pop("X-Requested-With", None)
+
+            if r.status_code == 200 and ("succeed" in r.text.lower() or "成功" in r.text or r.status_code == 200):
+                return True
+            # 有些 Discuz 版本直接返回 200 跳转也算成功
+            if r.status_code in (200, 301, 302):
+                return True
+            print(f"    ⚠ 高亮响应异常 (HTTP {r.status_code}): {r.text[:200]}")
+            return False
+        except Exception as e:
+            print(f"    ⚠ 高亮失败: {e}")
+            return False
+
     def post_news_file(self, stem: str, txt_path: str, json_path: str,
                        news_dir: str, no_image: bool = False,
                        attach_json: bool = True) -> str:
@@ -627,7 +691,27 @@ class MCBBSPoster:
         else:
             print(f"    ⚠ 警告: 未找到分类 {module_type} 的 sortid 配置")
 
-        return self.post_thread(title, message, attachment_ids=attachment_ids, sortid=sortid)
+        post_url = self.post_thread(title, message, attachment_ids=attachment_ids, sortid=sortid)
+
+        # 发帖后自动高亮
+        if post_url and post_url.startswith("http"):
+            # 用原标题检测新闻类型用于高亮（英文优先，中文补充）
+            from utils import classify_article_type
+            news_type = None
+            if original_title:
+                news_type = classify_article_type(original_title, chinese=False, fallback=None)
+            if not news_type:
+                news_type = classify_article_type(title, chinese=True, fallback=None)
+            highlight_color = HIGHLIGHT_COLOR_MAP.get(news_type, 0) if news_type else 0
+            if highlight_color:
+                color_names = {1: "红色(正式版)", 2: "橙色(主机)", 4: "绿色(快照/测试版)", 6: "蓝色(周边)", 8: "粉色(快讯)"}
+                print(f"    高亮: {color_names.get(highlight_color, str(highlight_color))}")
+                if self._apply_highlight(post_url, highlight_color):
+                    print("    ✓ 高亮设置成功！")
+                else:
+                    print("    ⚠ 高亮设置失败（不影响发帖）")
+
+        return post_url
 
 
 # ── 状态管理 ─────────────────────────────────────────
