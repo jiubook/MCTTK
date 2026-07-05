@@ -55,6 +55,7 @@ HIGHLIGHT_COLOR_MAP = {
     'flash': 8,             # 快讯 #EC1282
     'host': 2,              # 主机资讯 #EE5023
     'peripheral': 6,        # 周边消息 #2B65B7
+    'normal': 3,            # 块讯（兜底）默认蓝色
 }
 
 UA = (
@@ -743,7 +744,10 @@ class MCBBSPoster:
                 news_type = classify_article_type(original_title, chinese=False, fallback=None)
             if not news_type:
                 news_type = classify_article_type(title, chinese=True, fallback=None)
-            highlight_color = HIGHLIGHT_COLOR_MAP.get(news_type, 0) if news_type else 0
+            # 兜底：无法识别的新闻默认归为“块讯”，确保所有帖子都有高亮
+            if not news_type:
+                news_type = "normal"
+            highlight_color = HIGHLIGHT_COLOR_MAP.get(news_type, 0)
             if highlight_color:
                 color_names = {
                     1: "红色(正式版)", 2: "橙色(主机)",
