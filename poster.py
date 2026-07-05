@@ -52,10 +52,10 @@ HIGHLIGHT_COLOR_MAP = {
     'java_prerelease': 4,   # 预发布版 #3C9D40
     'java_rc': 4,           # 候选版本 #3C9D40
     'bedrock_beta': 4,      # 测试版 #3C9D40
-    'flash': 8,             # 快讯 #EC1282
+    'flash': 8,             # 块讯 #EC1282
     'host': 2,              # 主机资讯 #EE5023
     'peripheral': 6,        # 周边消息 #2B65B7
-    'normal': 3,            # 块讯（兜底）默认蓝色
+    'normal': 8,            # 块讯（兜底）#EC1282
 }
 
 UA = (

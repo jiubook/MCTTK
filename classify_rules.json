@@ -58,10 +58,10 @@
     },
     {
       "type": "flash",
-      "pattern": "\\bflash\\b|快讯|速报",
+      "pattern": "\\bflash\\b|块讯|速报",
       "exclude": [],
       "require_chinese": true,
-      "chinese_keywords": ["快讯", "速报"]
+      "chinese_keywords": ["块讯", "速报"]
     }
   ]
 }
