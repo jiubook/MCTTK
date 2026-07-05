@@ -579,7 +579,10 @@ class MCBBSPoster:
         raise RuntimeError(f"发帖结果不明: {r.url}")
 
     def _apply_highlight(self, thread_url: str, highlight_color: int) -> bool:
-        """对已发帖子应用高亮（Discuz 管理操作）"""
+        """对已发帖子应用高亮（Discuz topicadmin 管理操作）
+
+        需要版主/管理员权限。通过 topicadmin moderate 端点提交高亮请求。
+        """
         if not self.session:
             return False
         if highlight_color <= 0:
@@ -592,35 +595,74 @@ class MCBBSPoster:
         tid = tid_match.group(1)
 
         try:
-            # 获取 formhash（如果尚未获取）
+            # 确保 formhash 有效
             if not self.formhash:
                 r = self.session.get(f"{self.base_url}/forum.php")
                 r.raise_for_status()
                 self.formhash = extract_formhash(r.text)
 
-            # 提交高亮请求
-            modcp_url = f"{self.base_url}/modcp.php?operation=highlight&tid={tid}&infloat=yes&inajax=1"
+            # 通过 topicadmin 获取高亮表单
+            moderate_url = (
+                f"{self.base_url}/forum.php?mod=topicadmin&action=moderate"
+                f"&fid={self.forum_fid}&tid={tid}&optgroup=1&infloat=yes&inajax=1"
+            )
             referer = f"{self.base_url}/thread-{tid}-1-1.html"
             self.session.headers.update({"Referer": referer, "X-Requested-With": "XMLHttpRequest"})
 
-            r = self.session.post(
-                modcp_url,
-                data={
-                    "formhash": self.formhash,
-                    "highlight_color": str(highlight_color),
-                    "highlight_submit": "提交",
-                    "handlesubmit": "提交",
-                },
-            )
-            self.session.headers.pop("Referer", None)
+            r_get = self.session.get(moderate_url)
             self.session.headers.pop("X-Requested-With", None)
 
-            if r.status_code == 200 and ("succeed" in r.text.lower() or "成功" in r.text or r.status_code == 200):
+            # 检查是否有权限
+            if "没有权限" in r_get.text or "alert_error" in r_get.text:
+                err_m = re.search(r'class="alert_error">([^<]+)', r_get.text)
+                err_msg = err_m.group(1).strip() if err_m else "无管理权限"
+                print(f"    ⚠ 高亮失败: {err_msg}")
+                self.session.headers.pop("Referer", None)
+                return False
+
+            # 从返回的表单中提取 formhash 和 action URL
+            form_action = re.search(
+                r'<form[^>]*action="([^"]*moderate[^"]*)"', r_get.text
+            )
+            form_formhash = re.search(
+                r'name="formhash"\s+value="([a-f0-9]+)"', r_get.text
+            )
+            if not form_action or not form_formhash:
+                print("    ⚠ 无法提取高亮表单参数")
+                self.session.headers.pop("Referer", None)
+                return False
+
+            action_url = form_action.group(1).replace('&amp;', '&')
+            if action_url.startswith('./'):
+                action_url = action_url[2:]
+            full_action_url = f"{self.base_url}/{action_url}"
+
+            # 提交高亮
+            post_data = {
+                "formhash": form_formhash.group(1),
+                "fid": str(self.forum_fid),
+                "operation": "highlight",
+                "optgroup": "1",
+                "highlight_color": str(highlight_color),
+                "modsubmit": "yes",
+                "redirect": f"{self.base_url}/./thread-{tid}-1-1.html",
+                "handlekey": "mods",
+            }
+
+            r_post = self.session.post(full_action_url, data=post_data)
+            self.session.headers.pop("Referer", None)
+
+            # 检查结果
+            resp = r_post.text
+            if "succeedhandle" in resp or "成功" in resp or r_post.status_code in (200, 301, 302):
                 return True
-            # 有些 Discuz 版本直接返回 200 跳转也算成功
-            if r.status_code in (200, 301, 302):
+            if "没有权限" in resp:
+                print("    ⚠ 高亮失败: 账号无管理权限")
+                return False
+            # Discuz AJAX 成功响应通常是 XML
+            if "<root>" in resp and "errorhandle" not in resp:
                 return True
-            print(f"    ⚠ 高亮响应异常 (HTTP {r.status_code}): {r.text[:200]}")
+            print(f"    ⚠ 高亮响应异常 (HTTP {r_post.status_code}): {resp[:200]}")
             return False
         except Exception as e:
             print(f"    ⚠ 高亮失败: {e}")
