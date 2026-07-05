@@ -668,6 +668,103 @@ class MCBBSPoster:
             print(f"    ⚠ 高亮失败: {e}")
             return False
 
+    def _save_pending_highlight(self, post_url: str, original_title: str,
+                                translated_title: str, news_dir: str):
+        """保存待高亮的帖子信息到 JSON 文件，等待审核通过后处理"""
+        from utils import classify_article_type
+        news_type = None
+        if original_title:
+            news_type = classify_article_type(original_title, chinese=False, fallback=None)
+        if not news_type:
+            news_type = classify_article_type(translated_title, chinese=True, fallback=None)
+        if not news_type:
+            news_type = "normal"
+        highlight_color = HIGHLIGHT_COLOR_MAP.get(news_type, 0)
+
+        pending_file = os.path.join(news_dir, ".pending_highlights.json")
+        pending = []
+        if os.path.exists(pending_file):
+            try:
+                with open(pending_file, encoding="utf-8") as f:
+                    pending = json.load(f)
+            except (OSError, json.JSONDecodeError):
+                pass
+
+        # 提取 thread ID
+        tid_match = re.search(r'thread-(\d+)-', post_url)
+        tid = tid_match.group(1) if tid_match else ""
+
+        pending.append({
+            "url": post_url,
+            "tid": tid,
+            "title": original_title,
+            "translated_title": translated_title,
+            "news_type": news_type,
+            "highlight_color": highlight_color,
+            "created_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        })
+
+        try:
+            with open(pending_file, "w", encoding="utf-8") as f:
+                json.dump(pending, f, ensure_ascii=False, indent=2)
+            print(f"    📝 已保存待高亮信息（共{len(pending)}条待处理）")
+        except OSError as e:
+            print(f"    ⚠ 保存待高亮信息失败: {e}")
+
+    def process_pending_highlights(self, news_dir: str) -> int:
+        """处理待高亮的帖子（审核通过后调用）。返回成功数。"""
+        pending_file = os.path.join(news_dir, ".pending_highlights.json")
+        if not os.path.exists(pending_file):
+            return 0
+
+        try:
+            with open(pending_file, encoding="utf-8") as f:
+                pending = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            return 0
+
+        if not pending:
+            return 0
+
+        print(f"\n[*] 处理 {len(pending)} 条待高亮帖子...")
+        remaining = []
+        success = 0
+        color_names = {
+            1: "红色(正式版)", 2: "橙色(主机)",
+            4: "绿色(快照/测试版)", 6: "蓝色(周边)",
+            8: "粉色(块讯)",
+        }
+
+        for item in pending:
+            url = item.get("url", "")
+            color = item.get("highlight_color", 0)
+            title = item.get("translated_title") or item.get("title", "")
+
+            if not url.startswith("http") or not color:
+                continue
+
+            print(f"  尝试高亮: {title[:50]}...")
+            if self._apply_highlight(url, color):
+                print(f"    ✓ 高亮成功: {color_names.get(color, str(color))}")
+                success += 1
+            else:
+                # 可能仍未审核通过，保留待处理
+                remaining.append(item)
+
+        # 更新待处理文件
+        try:
+            if remaining:
+                with open(pending_file, "w", encoding="utf-8") as f:
+                    json.dump(remaining, f, ensure_ascii=False, indent=2)
+                print(f"  剩余 {len(remaining)} 条待处理")
+            else:
+                os.remove(pending_file)
+                print("  所有待高亮帖子已处理完毕")
+        except OSError:
+            pass
+
+        return success
+
     def post_news_file(self, stem: str, txt_path: str, json_path: str,
                        news_dir: str, no_image: bool = False,
                        attach_json: bool = True) -> str:
@@ -735,8 +832,9 @@ class MCBBSPoster:
 
         post_url = self.post_thread(title, message, attachment_ids=attachment_ids, sortid=sortid)
 
-        # 发帖后自动高亮
-        if post_url and post_url.startswith("http"):
+        # 发帖后自动高亮（审核中的帖子跳过，记录待处理）
+        need_moderation = "(需审核)" in (post_url or "")
+        if post_url and post_url.startswith("http") and not need_moderation:
             # 用原标题检测新闻类型用于高亮（英文优先，中文补充）
             from utils import classify_article_type
             news_type = None
@@ -752,13 +850,17 @@ class MCBBSPoster:
                 color_names = {
                     1: "红色(正式版)", 2: "橙色(主机)",
                     4: "绿色(快照/测试版)", 6: "蓝色(周边)",
-                    8: "粉色(快讯)",
+                    8: "粉色(块讯)",
                 }
                 print(f"    高亮: {color_names.get(highlight_color, str(highlight_color))}")
                 if self._apply_highlight(post_url, highlight_color):
                     print("    ✓ 高亮设置成功！")
                 else:
                     print("    ⚠ 高亮设置失败（不影响发帖）")
+        elif need_moderation:
+            # 审核中的帖子：记录待高亮信息，下次运行时补上
+            print("    ⏳ 帖子进入审核，高亮待审核通过后处理")
+            self._save_pending_highlight(post_url, original_title, title, news_dir)
 
         return post_url
 
