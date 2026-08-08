@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """utils.py — 项目公共工具函数"""
 
+import contextlib
+import json
 import os
 import re
 
@@ -39,6 +41,50 @@ def load_dotenv(project_dir: str = None) -> None:
                 os.environ.setdefault(k.strip(), v.strip())
 
 
+# ── 新闻类型分类（规则引擎）──────────────────────────
+
+_CLASSIFY_RULES = None
+
+
+def _load_classify_rules(rules_path: str = None) -> list:
+    """加载分类规则文件，返回规则列表（带预编译正则）"""
+    if rules_path is None:
+        rules_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "classify_rules.json")
+    if not os.path.exists(rules_path):
+        return []
+    try:
+        with open(rules_path, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return []
+
+    compiled = []
+    for rule in data.get("rules", []):
+        try:
+            pattern = re.compile(rule["pattern"], re.IGNORECASE)
+        except re.error:
+            continue
+        excludes = []
+        for ex in rule.get("exclude", []):
+            with contextlib.suppress(re.error):
+                excludes.append(re.compile(ex, re.IGNORECASE))
+        compiled.append({
+            "type": rule["type"],
+            "pattern": pattern,
+            "excludes": excludes,
+            "require_chinese": rule.get("require_chinese", False),
+            "chinese_keywords": rule.get("chinese_keywords", []),
+        })
+    return compiled
+
+
+def _get_classify_rules() -> list:
+    global _CLASSIFY_RULES
+    if _CLASSIFY_RULES is None:
+        _CLASSIFY_RULES = _load_classify_rules()
+    return _CLASSIFY_RULES
+
+
 def classify_article_type(
     title: str,
     *,
@@ -47,42 +93,36 @@ def classify_article_type(
     fallback: str | None = "other",
 ) -> str | None:
     """
-    统一的文章类型分类核心逻辑。
+    统一的文章类型分类核心逻辑（基于 classify_rules.json 规则引擎）。
+
+    分类优先级：
+      1. 按规则文件中的顺序匹配（优先级从高到低）
+      2. 首个命中的规则生效
+      3. 排除模式命中则跳过该规则
+      4. 无规则命中时回退到 commentary / fallback
 
     Args:
         title: 文章标题
-        chinese: True 时额外检测中文关键词（快照/预发布/候选/预览/基岩）
-        commentary: True 时额外检测"时评/commentary"类型
+        chinese: True 时额外检测中文关键词
+        commentary: True 时时评类型返回 "commentary"（向后兼容）
         fallback: 无匹配时的返回值（"other"、"normal" 或 None）
     """
     t = title or ""
-    t_lower = t.lower()
 
-    # Java 版本（优先级高）
-    if "snapshot" in t_lower or (chinese and "快照" in t):
-        return "java_snapshot"
-    if (
-        "pre-release" in t_lower
-        or "pre release" in t_lower
-        or "prerelease" in t_lower
-        or (chinese and "预发布" in t)
-    ):
-        return "java_prerelease"
-    if "release candidate" in t_lower or (chinese and "候选" in t):
-        return "java_rc"
+    # 按规则顺序匹配
+    for rule in _get_classify_rules():
+        # 排除模式优先
+        if any(ex.search(t) for ex in rule["excludes"]):
+            continue
+        # 英文正则匹配
+        if rule["pattern"].search(t):
+            return rule["type"]
+        # 中文关键词匹配（仅当 chinese=True 且规则启用时）
+        if chinese and rule["require_chinese"] and any(kw in t for kw in rule["chinese_keywords"]):
+            return rule["type"]
 
-    # 基岩版本
-    if "beta" in t_lower or "preview" in t_lower or "预览" in t:
-        return "bedrock_beta"
-    if "bedrock" in t_lower or "基岩" in t:
-        return "bedrock_release"
-
-    # 时评（可选）
-    if commentary and ("时评" in t or "commentary" in t_lower):
+    # 时评（向后兼容）
+    if commentary and ("时评" in t or "commentary" in t.lower()):
         return "commentary"
-
-    # Java 正式版
-    if "java edition" in t_lower or "java版" in t or re.search(r'\b1\.\d+(\.\d+)?\b', t):
-        return "java_release"
 
     return fallback

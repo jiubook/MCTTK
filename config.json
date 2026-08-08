@@ -106,7 +106,9 @@
         "bedrock_beta": 20,
         "bedrock_release": 20,
         "commentary": 16,
-        "normal": 16
+        "normal": 16,
+        "host": 16,
+        "flash": 16
     },
     "attach_json": true
   }

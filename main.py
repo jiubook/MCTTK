@@ -311,6 +311,12 @@ def run_post(processed: list, config: dict, no_image: bool = False, no_json: boo
     success = 0
     failed = 0
 
+    # 处理上次运行中进入审核的待高亮帖子
+    try:
+        poster.process_pending_highlights(save_dir)
+    except Exception as e:
+        print(f"[主] 处理待高亮帖子时出错: {e}")
+
     for stem, txt_path, json_path in processed:
         try:
             print(f"\n[主] 发布: {stem}")
@@ -365,6 +371,12 @@ def run_post_only(config: dict):
     except Exception as e:
         print(f"\n[主] MCBBS 登录失败: {e}")
         return
+
+    # 处理待高亮帖子
+    try:
+        poster.process_pending_highlights(save_dir)
+    except Exception as e:
+        print(f"[主] 处理待高亮帖子时出错: {e}")
 
     for stem, txt_path, json_path in pending:
         try:
